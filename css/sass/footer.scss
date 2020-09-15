@@ -7,9 +7,18 @@
   display: grid;
   grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
 
-  a {
+  a, span {
     font-size: var(--fs-p);
+    margin: 5px;
   }
 
-  a, span {margin: 5px;}
+  a:hover {
+    font-weight: 600;
+    transition: font-weight .2s ease-in-out;
+    -webkit-transition: font-weight .2s ease-in-out;
+  }
+
+  .email {font-weight: 600;}
+
+  .address {text-decoration: underline;}
 }

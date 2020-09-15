@@ -9,8 +9,9 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 80% 20%;
+    pointer-events: none;
 
-    .title {
+    .intro__title {
       grid-column: 1;
       grid-row: 1;
       padding: 5px;
@@ -42,16 +43,18 @@
       }
     }
 
-    .subtitle {
+    .intro__subtitle {
       grid-column: 1;
       grid-row: 2;
       text-align: right;
 
       span {
         font-size: var(--fs-subtitle);
-        padding: 8px 15px 8px 190px;
+        padding: 8px 15px 8px 180px;
         background-color: var(--accent-color);
-        color: var(--light-grey);
+        // color: var(--light-grey);
+        font-weight: 600;
+        color: var(--dark-grey);
         font-family: var(--ff-subtitle);
         border-radius: 0 0 0 7px;
       }

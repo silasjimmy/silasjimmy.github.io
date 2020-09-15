@@ -1,7 +1,5 @@
 /* Header styles */
 
-// .header * {border: 1px solid black;}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -12,10 +10,9 @@
   right: 0;
   background-color: var(--light-grey);
 
-  .logo {
-    a {
-      font-size: var(--fs-p);
-    }
+  .logo p:hover {
+    color: var(--accent-color);
+    transition: color .2s ease-in-out;
   }
 
   .hamburger_icon {

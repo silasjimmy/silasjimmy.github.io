@@ -5,6 +5,7 @@
     <title>Silas Jimmy</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
   </head>
   <body>
     <svg class="hidden">
@@ -21,7 +22,7 @@
 
       <!-- Header section -->
       <header class="header">
-        <div class="logo"><a href="#">{ silasjimmy }</a></div>
+        <div class="logo"><a href="#"><p>{-slimjimmy-}</p></a></div>
         <div class="hamburger_icon">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -32,12 +33,12 @@
       <!-- Introduction section -->
       <div class="intro">
         <section class="intro__section hsc">
-          <div class="title ccc">
+          <div class="intro__title ccc">
             <p>Hi there,</p>
             <p>i am</p>
             <p><strong>Silas Jimmy</strong></p>
           </div>
-          <div class="subtitle bce"><span>programmer</span></div>
+          <div class="intro__subtitle bce"><span>programmer</span></div>
           <div class="image"><img src="images/intro_image.jpg" alt="silas-jimmy"></div>
         </section>
       </div>
@@ -48,17 +49,20 @@
           <div class="title"><h1>About Me</h1></div>
           <div class="content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-              eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-              in culpa qui officia deserunt mollit anim id est laborum.
+              I am a computer science student who happens to be a programmer
+              and designer. I like designing website interfaces using basic
+              HTML, CSS and vanilla JavaScript. I am a Python developer currently
+              working on small projects finding solutions to problems majorly on
+              the field of Machine and Deep Learning. I love computer games and as
+              a programmer i develop 2D games using Unity3D game engine. Basically
+              am a nerd who likes having fun with technology and a big fan of collaboration.
             </p>
           </div>
           <div class="resume_link"><a class="btn" href="#">resume</a></div>
         </section>
       </div>
+
+      <!-- What i do section -->
       <div class="do">
         <section class="do__section hsc">
           <div class="title"><h1>What I Do</h1></div>
@@ -90,35 +94,49 @@
           </div>
         </section>
       </div>
+
+      <!-- My work section -->
       <div class="work">
         <section class="work__section hsc">
           <div class="title"><h1>My Work</h1></div>
           <div class="work_content">
             <div class="container">
-              <div class="prev ccc"><svg class="icon"><use xlink:href="#arrow-left"></use></svg></div>
-              <div class="next ccc"><svg class="icon"><use xlink:href="#arrow-right"></use></svg></div>
+              <div class="prev ccc"><svg class="icon prev_slide"><use xlink:href="#arrow-left"></use></svg></div>
+              <div class="next ccc"><svg class="icon next_slide"><use xlink:href="#arrow-right"></use></svg></div>
               <div class="work">
                 <div class="carousel">
-                  <div class="carousel-item active--slide">
+                  <div class="carousel-item fade">
                     <div class="card">
                       <img src="images/card_image.jpg" alt="">
-                      <a href="#">work one</a>
+                      <a href="#"><h3>work one title</h3></a>
                     </div>
                     <div class="card">
                       <img src="images/card_image.jpg" alt="">
-                      <a href="#">work two</a>
+                      <a href="#"><h3>work two title</h3></a>
+                    </div>
+                  </div>
+                  <div class="carousel-item fade">
+                    <div class="card">
+                      <img src="images/card_image.jpg" alt="">
+                      <a href="#"><h3>work three title</h3></a>
+                    </div>
+                    <div class="card">
+                      <img src="images/card_image.jpg" alt="">
+                      <a href="#"><h3>work four title</h3></a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="indicators">
-                <span class="indicator active--indicator"></span>
+                <span class="indicator"></span>
                 <span class="indicator"></span>
               </div>
             </div>
           </div>
         </section>
       </div>
+
+      <!-- Contact section -->
       <div class="contact">
         <section class="contact__section hsc">
           <h1>Contact</h1>
@@ -131,16 +149,18 @@
         </section>
       </div>
     </div>
+
+    <!-- Footer section -->
     <footer class="footer">
       <div class="links ccc">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="#">My blog</a>
+        <a href="#">Resume</a>
+        <a href="#">Other</a>
       </div>
       <div class="contact_info ccc">
-        <p class="tel_no">Tel No</p>
-        <p class="email">email</p>
-        <p class="address">address</p>
+        <span>+254 719 773 594</span>
+        <span class="email">jimmysilas17@gmail.com</span>
+        <span class="address">P.O Box 252-90200 Kitui.</span>
       </div>
       <div class="social_info ccc">
         <a href="#">Linkedin</a>

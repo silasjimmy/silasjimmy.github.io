@@ -2,6 +2,7 @@
 
 .active--indicator {
   background: var(--accent-color) !important;
+  transition: background .2s ease-in-out;
 }
 
 .work {
@@ -15,11 +16,12 @@
 
     .title {
       text-align: center;
+      pointer-events: none;
     }
 
     .work_content {
       .container {
-        width: 80%;
+        width: 90%;
         height: 100%;
         margin: 0 auto;
         display: grid;
