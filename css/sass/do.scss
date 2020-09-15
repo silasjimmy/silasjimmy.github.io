@@ -1,0 +1,49 @@
+/* What i do styles */
+
+.do {
+  height: 100vh;
+
+  .do__section {
+    width: 60%;
+    height: 60%;
+    display: grid;
+    grid-template-rows: 17.5% 82.5%;
+
+    .title {
+      grid-area: 1/1/1/1;
+      padding: 10px;
+      pointer-events: none;
+      text-align: center;
+    }
+
+    .do_content {
+      display: grid;
+      grid-template-rows: 50% 50%;
+      grid-template-columns: 50% 50%;
+
+      .card_container {
+        padding: .5em;
+
+        .card {
+          height: 100%;
+          box-sizing: border-box;
+          border-radius: 3px;
+
+          h2 {
+            margin: .3em;
+            pointer-events: none;
+          }
+
+          span {
+            display: none;
+          }
+
+          &:hover {
+            box-shadow: var(--box-shadow);
+            span {display: inline !important;}
+          }
+        }
+      }
+    }
+  }
+}

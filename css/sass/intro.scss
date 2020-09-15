@@ -1,0 +1,60 @@
+/* Intro section styles */
+
+.intro {
+  height: 100vh;
+
+  .intro__section {
+    width: 50%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80% 20%;
+
+    .title {
+      grid-column: 1;
+      grid-row: 1;
+      padding: 5px;
+
+      p {
+        font-size: var(--fs-title);
+        text-align: center;
+        line-height: 1.4;
+        color: var(--dark-grey);
+      }
+
+      strong {
+        font-family: var(--ff-title);
+        color: var(--black-color);
+      }
+    }
+
+    .image {
+      grid-column: 2;
+      grid-row: 1/3;
+      padding: 5px;
+      background-color: var(--accent-color);
+      border-radius: 0 7px 7px 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 7px 7px 0;
+      }
+    }
+
+    .subtitle {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: right;
+
+      span {
+        font-size: var(--fs-subtitle);
+        padding: 8px 15px 8px 190px;
+        background-color: var(--accent-color);
+        color: var(--light-grey);
+        font-family: var(--ff-subtitle);
+        border-radius: 0 0 0 7px;
+      }
+    }
+  }
+}

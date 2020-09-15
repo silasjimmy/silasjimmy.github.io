@@ -1,0 +1,62 @@
+/* Work styles */
+
+.active--indicator {
+  background: var(--accent-color) !important;
+}
+
+.work {
+  height: 100vh;
+
+  .work__section {
+    width: 60%;
+    height: 60%;
+    display: grid;
+    grid-template-rows: 17.5% 82.5%;
+
+    .title {
+      text-align: center;
+    }
+
+    .work_content {
+      .container {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 90% 10%;
+
+        .prev {
+          grid-area: 1/1/2/1;
+        }
+
+        .next {
+          grid-area: 1/3/2/3;
+        }
+
+        .work {
+          grid-area: 1/2/1/2;
+          position: relative;
+          height: 100%;
+          width: 100%;
+        }
+
+        .indicators {
+          grid-area: 2/2/2/3;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          .indicator {
+            width: 50px;
+            height: 5px;
+            margin: 5px;
+            background: var(--dark-grey);
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}

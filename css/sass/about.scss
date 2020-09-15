@@ -1,0 +1,21 @@
+/* About styles */
+
+.about {
+  height: 100vh;
+
+  .about__section {
+    width: 60%;
+    height: 60%;
+
+    .title, .content { pointer-events: none; }
+    .title { text-align: center; }
+    .content { padding: 10px; }
+
+    .resume_link {
+      display: flex;
+      justify-content: center;
+
+      a { margin: 20px; }
+    }
+  }
+}

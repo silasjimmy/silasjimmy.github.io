@@ -1,0 +1,15 @@
+/* Footer styles */
+
+.footer {
+  width: 100%;
+  height: 30vh;
+  background: var(--accent-color);
+  display: grid;
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+
+  a {
+    font-size: var(--fs-p);
+  }
+
+  a, span {margin: 5px;}
+}
