@@ -21,27 +21,37 @@
 
   --box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
   --slim-bs: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+  --anim-time: 2s;
 }
 
-body {
-  scroll-behavior: smooth;
-  background-color: var(--light-grey);
-}
+html {scroll-behavior: smooth;}
+
+body {background-color: var(--light-grey);}
 
 body, p, h1, h2, h3 {margin: 0;}
+
 img {object-fit: cover;}
+
 h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); }
+
 p {
   font-size: var(--fs-p);
   font-family: var(--ff-p);
   line-height: 1.5;
 }
+
 a {
   text-decoration: none;
   color: var(--black-color);
   font-family: var(--ff-btn);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .main {
@@ -69,8 +79,8 @@ a {
 }
 
 .btn {
-  color: var(--link-color);
-  background: var(--accent-color);
+  color: var(--light-grey);
+  background: var(--dark-grey);
   padding: 10px;
   font-weight: 600;
   border-radius: 2px;
@@ -81,8 +91,14 @@ a {
 
   &:hover {
     transform: scale(1.1);
-    transition: transform .2s linear;
-    -webkit-transition: transform .2s linear;
+    background: var(--accent-color);
+    color: var(--black-color);
+    transition: transform .2s linear,
+                background .2s linear,
+                color .2s linear;
+    -webkit-transition: transform .2s linear,
+                        background .2s linear,
+                        color .2s linear;
   }
 }
 

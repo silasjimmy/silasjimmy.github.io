@@ -3,6 +3,7 @@
 .active--indicator {
   background: var(--accent-color) !important;
   transition: background .2s ease-in-out;
+  -webkit-transition: background .2s ease-in-out;
 }
 
 .work {

@@ -4,6 +4,9 @@ class Portfolio {
     this.DOM.el = el;
 
     this.DOM.header = this.DOM.el.querySelector('header');
+    this.DOM.sidenavOpen = this.DOM.header.querySelector('.open');
+    this.DOM.sidenav = this.DOM.el.parentNode.querySelector('.sidenav');
+    this.DOM.sidenavClose = this.DOM.sidenav.querySelector('.close');
     this.DOM.carouselContainer = this.DOM.el.querySelector('.work_content > .container');
     this.DOM.nextSlideBtn = this.DOM.carouselContainer.querySelector('.next > .next_slide');
     this.DOM.prevSlideBtn = this.DOM.carouselContainer.querySelector('.prev > .prev_slide');
@@ -12,9 +15,10 @@ class Portfolio {
     this.slidesTotal = this.DOM.slides.length;
     this.current = 0;
 
-    this.DOM.slides[this.current].classList.add('active--slide');
+    this.DOM.slides[this.current].classList.add('active--slide', 'fade--in');
     this.DOM.indicators[this.current].classList.add('active--indicator');
-    // console.log(this.slidesTotal);
+
+    // console.dir(this.DOM.sidenav);
 
     this.initEvents();
   }
@@ -28,19 +32,32 @@ class Portfolio {
       }
     });
 
+    this.DOM.sidenav.addEventListener('click', (e) => {
+      if (e.target.id != "sidenav__link") return;
+      this.toggleSidenav();
+    })
+
     this.DOM.nextSlideBtn.addEventListener('click', () => this.moveTo("next"));
 
     this.DOM.prevSlideBtn.addEventListener('click', () => this.moveTo("prev"));
+
+    this.DOM.sidenavOpen.addEventListener('click', () => this.toggleSidenav());
+
+    this.DOM.sidenavClose.addEventListener('click', () => this.toggleSidenav());
   }
 
   moveTo(direction) {
-    this.DOM.slides[this.current].classList.remove("active--slide");
+    this.DOM.slides[this.current].classList.remove("active--slide", "fade--in");
     this.DOM.indicators[this.current].classList.remove('active--indicator');
 
     this.current = direction === 'next' ? this.current < this.slidesTotal-1 ? this.current + 1 : 0 : this.current > 0 ? this.current - 1 : this.slidesTotal-1;
 
-    this.DOM.slides[this.current].classList.add("active--slide");
+    this.DOM.slides[this.current].classList.add("active--slide", "fade--in");
     this.DOM.indicators[this.current].classList.add('active--indicator');
+  }
+
+  toggleSidenav() {
+    this.DOM.sidenav.classList.toggle('sidenav--open');
   }
 }
 

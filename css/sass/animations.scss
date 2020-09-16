@@ -1,0 +1,38 @@
+/* Animations */
+
+/* Fading in animation */
+.fade--in {
+  animation-name: fadeIn;
+  animation-duration: var(--anim-time);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: var(--anim-time);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+/* Fading out animation */
+
+.fade--out {
+  animation-name: fadeOut;
+  animation-duration: var(--anim-time);
+  -webkit-animation-name: fadeOut;
+  -webkit-animation-duration: var(--anim-time);
+}
+
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+
+@-webkit-keyframes fadeOut {
+  from {opacity: 1}
+  to {opacity: 0}
+}

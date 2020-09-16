@@ -18,12 +18,26 @@
         <path d="M 33.585486,12.140336 23.485034,24.119744 21.006746,22.255187 28.40367,13.190086 0,13.455889 C 0.03631,12.286462 0.03795,11.929615 0.07426,10.760188 L 28.089266,10.561483 21.364981,2.3135874 23.230052,0 33.585485,12.140333 c 0.217252,0.221641 0.217252,-0.221641 0,0 z"/>
       </symbol>
     </svg>
-    <div class="main">
 
+    <!-- Sidenav section -->
+    <nav class="sidenav">
+      <ul class="sidenav__links hsc ccc">
+        <li class="link"><a id="sidenav__link" href="#about">about</a></li>
+        <li class="link"><a id="sidenav__link" href="#do">what i do</a></li>
+        <li class="link"><a id="sidenav__link" href="#work">my work</a></li>
+        <li class="link"><a id="sidenav__link" href="#contact">contact</a></li>
+      </ul>
+      <div class="close ccc">
+        <div class="bar one"></div>
+        <div class="bar two"></div>
+      </div>
+    </nav>
+
+    <div class="main">
       <!-- Header section -->
       <header class="header">
-        <div class="logo"><a href="#"><p>{-slimjimmy-}</p></a></div>
-        <div class="hamburger_icon">
+        <div class="logo"><a href="index.html"><p>{-slimjimmy-}</p></a></div>
+        <div class="open">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -31,7 +45,7 @@
       </header>
 
       <!-- Introduction section -->
-      <div class="intro">
+      <div id="intro" class="intro">
         <section class="intro__section hsc">
           <div class="intro__title ccc">
             <p>Hi there,</p>
@@ -44,7 +58,7 @@
       </div>
 
       <!-- About section -->
-      <div class="about">
+      <div id="about" class="about">
         <section class="about__section hsc">
           <div class="title"><h1>About Me</h1></div>
           <div class="content">
@@ -63,7 +77,7 @@
       </div>
 
       <!-- What i do section -->
-      <div class="do">
+      <div id="do" class="do">
         <section class="do__section hsc">
           <div class="title"><h1>What I Do</h1></div>
           <div class="do_content">
@@ -96,7 +110,7 @@
       </div>
 
       <!-- My work section -->
-      <div class="work">
+      <div id="work" class="work">
         <section class="work__section hsc">
           <div class="title"><h1>My Work</h1></div>
           <div class="work_content">
@@ -105,7 +119,7 @@
               <div class="next ccc"><svg class="icon next_slide"><use xlink:href="#arrow-right"></use></svg></div>
               <div class="work">
                 <div class="carousel">
-                  <div class="carousel-item fade">
+                  <div class="carousel-item">
                     <div class="card">
                       <img src="images/card_image.jpg" alt="">
                       <a href="#"><h3>work one title</h3></a>
@@ -115,7 +129,7 @@
                       <a href="#"><h3>work two title</h3></a>
                     </div>
                   </div>
-                  <div class="carousel-item fade">
+                  <div class="carousel-item">
                     <div class="card">
                       <img src="images/card_image.jpg" alt="">
                       <a href="#"><h3>work three title</h3></a>
@@ -137,7 +151,7 @@
       </div>
 
       <!-- Contact section -->
-      <div class="contact">
+      <div id="contact" class="contact">
         <section class="contact__section hsc">
           <h1>Contact</h1>
           <p>
@@ -148,26 +162,26 @@
           </p>
         </section>
       </div>
-    </div>
 
-    <!-- Footer section -->
-    <footer class="footer">
-      <div class="links ccc">
-        <a href="#">My blog</a>
-        <a href="#">Resume</a>
-        <a href="#">Other</a>
-      </div>
-      <div class="contact_info ccc">
-        <span>+254 719 773 594</span>
-        <span class="email">jimmysilas17@gmail.com</span>
-        <span class="address">P.O Box 252-90200 Kitui.</span>
-      </div>
-      <div class="social_info ccc">
-        <a href="#">Linkedin</a>
-        <a href="#">Twitter</a>
-        <a href="#">Github</a>
-      </div>
-    </footer>
+      <!-- Footer section -->
+      <footer class="footer">
+        <div class="links ccc">
+          <a href="#">My blog</a>
+          <a href="#">Resume</a>
+          <a href="#">Other</a>
+        </div>
+        <div class="contact_info ccc">
+          <span>+254 719 773 594</span>
+          <span class="email">jimmysilas17@gmail.com</span>
+          <span class="address">P.O Box 252-90200 Kitui.</span>
+        </div>
+        <div class="social_info ccc">
+          <a href="#">Linkedin</a>
+          <a href="#">Twitter</a>
+          <a href="#">Github</a>
+        </div>
+      </footer>
+    </div>
 
     <script type="text/javascript" src="js/index.js"></script>
   </body>
