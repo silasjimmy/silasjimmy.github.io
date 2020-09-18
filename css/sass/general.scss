@@ -19,9 +19,9 @@
   --grey-darken-1: #212121;
   --grey-darken-2: #424242;
 
-  --ff-title: 'Anton', sans-serif;;
-  --ff-h5: 'Oswald', sans-serif;;
-  --ff-p: 'Roboto Mono', monospace;
+  --ff-Anton: 'Anton', sans-serif;
+  --ff-Oswald: 'Oswald', sans-serif;
+  --ff-Roboto: 'Roboto Mono', monospace;
   --ff-btn: fantasy;
 
   --dark-box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -40,44 +40,64 @@ body {margin: 0}
 h1 {
   margin: 0;
   font-size: var(--fs-h1);
+  font-family: var(--ff-Anton);
 }
 
 h2 {
   margin: 0;
   font-size: var(--fs-h2);
+  font-family: var(--ff-Oswald);
 }
 
 h3 {
   margin: 0;
   font-size: var(--fs-h3);
+  font-family: var(--ff-Oswald);
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 h4 {
-  font-weight: 100;
+  font-weight: 600;
   margin: 5px;
+  letter-spacing: 2px;
   font-size: var(--fs-h4);
+  font-family: var(--ff-Oswald);
 }
 
 h5 {
   margin: 0;
   font-size: var(--fs-h5);
-  font-family: var(--ff-h5);
+  font-family: var(--ff-Oswald);
+  font-weight: 600;
+  letter-spacing: 2px;
   padding: 8px 15px 8px 180px;
   font-weight: 600;
   border-radius: 0 0 0 7px;
   pointer-events: none;
 }
 
+strong {
+  font-family: var(--ff-Anton);
+}
+
 p {
   margin: 0;
   font-size: var(--fs-p);
-  font-family: var(--ff-p);
+  font-family: var(--ff-Oswald);
+  font-weight: 600;
+  letter-spacing: 2px;
   line-height: 1.5;
 }
 
 img {object-fit: cover}
 
-a {text-decoration: none;}
+a {
+  text-decoration: none;
+  font-family: var(--ff-Oswald);
+  letter-spacing: 2px;
+  font-weight: 600;
+}
 
 ul {
   list-style: none;
@@ -90,12 +110,18 @@ ul {
 
 .logo_link {
   font-size: var(--fs-p);
-  font-family: var(--ff-p);
+  font-family: var(--ff-Oswald);
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .light_theme_link {
   font-size: var(--fs-p);
   margin: 5px;
+}
+
+.dark_theme_link {
+  font-family: var(--ff-Anton);
 }
 
 .hsc {

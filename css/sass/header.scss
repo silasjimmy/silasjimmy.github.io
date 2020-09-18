@@ -23,6 +23,9 @@
     .dropdown_trigger {
       font-size: var(--fs-p);
       cursor: default;
+      font-family: var(--ff-Oswald);
+      font-weight: 600;
+      letter-spacing: 2px;
     }
 
     .dropdown_content {
@@ -35,6 +38,9 @@
         cursor: pointer;
         font-size: var(--fs-dropdown);
         padding: .6em .2em;
+        font-family: var(--ff-Oswald);
+        font-weight: 600;
+        letter-spacing: 2px;
       }
     }
   }
