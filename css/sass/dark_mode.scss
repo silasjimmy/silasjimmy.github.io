@@ -1,8 +1,8 @@
 /* Dark mode styles */
 
 .dark--mode {
-
-  h1 {color: var(--grey-lighten-1)}
+  
+  h1 {color: var(--accent-color)}
 
   h2 {color: var(--grey-lighten-2)}
 
@@ -119,6 +119,28 @@
             color: var(--accent-color);
             transition: color .2s ease-in-out;
             -webkit-transition: color .2s ease-in-out;
+          }
+        }
+      }
+
+      .dropdown {
+        .dropdown_trigger {color: var(--grey-lighten-1)}
+
+        .dropdown_content {
+          background-color: var(--grey-darken-1);
+          box-shadow: var(--blue-box-shadow);
+
+          span {
+            color: var(--grey-lighten-2);
+
+            &:hover {
+              background-color: var(--grey-darken-2);
+              color: var(--accent-color);
+              transition: background-color .2s ease-in-out,
+                          color .2s ease-in-out;
+              -webkit-transition: background-color .2s ease-in-out,
+                                  color .2s ease-in-out;
+            }
           }
         }
       }

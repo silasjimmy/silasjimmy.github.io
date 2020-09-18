@@ -13,10 +13,11 @@
 
   --black: #000000;
   --grey-lighten-1: #fafafa;
-  --grey-lighten-2: #e0e0e0;
+  --grey-lighten-2: #eeeeee;
+  --grey-lighten-3: #e0e0e0;
   --accent-color: #03a9f4;
   --grey-darken-1: #212121;
-  --grey-darken-2: #f1f1f1;
+  --grey-darken-2: #424242;
 
   --ff-title: 'Anton', sans-serif;;
   --ff-h5: 'Oswald', sans-serif;;
@@ -29,7 +30,7 @@
   --dark-slim-bs: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   --blue-slim-bs: 0 2px 2px 0 rgba(3, 109, 154, 0.14), 0 3px 1px -2px rgba(3, 109, 154, 0.12), 0 1px 5px 0 rgba(3, 109, 154, 0.2);
 
-  --anim-time: 2s;
+  --anim-duration: 1s;
 }
 
 html {scroll-behavior: smooth;}

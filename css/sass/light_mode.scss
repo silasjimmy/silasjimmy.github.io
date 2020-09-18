@@ -1,7 +1,7 @@
 /* Light mode styles */
 
 .light--mode {
-
+  
   h1 {color: var(--black)}
 
   h2 {color: var(--grey-darken-1)}
@@ -122,6 +122,28 @@
             color: var(--accent-color);
             transition: color .2s ease-in-out;
             -webkit-transition: color .2s ease-in-out;
+          }
+        }
+      }
+
+      .dropdown {
+        .dropdown_trigger {color: var(--grey-darken-1)}
+
+        .dropdown_content {
+          background-color: var(--grey-lighten-2);
+          box-shadow: var(--dark-box-shadow);
+
+          span {
+            color: var(--grey-darken-1);
+
+            &:hover {
+              background-color: var(--grey-lighten-3);
+              color: var(--accent-color);
+              transition: background-color .2s ease-in-out,
+                          color .2s ease-in-out;
+              -webkit-transition: background-color .2s ease-in-out,
+                                  color .2s ease-in-out;
+            }
           }
         }
       }

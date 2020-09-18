@@ -1,9 +1,5 @@
 /* Header styles */
 
-.header * {
-  // border: 1px solid black;
-}
-
 .header {
   display: grid;
   grid-template-columns: 80% 10% 10%;
@@ -13,7 +9,6 @@
   position: fixed;
   left: 0;
   right: 0;
-  // border: 1px solid black;
 
   .dropdown {
     display: inline-block;
@@ -32,24 +27,14 @@
 
     .dropdown_content {
       position: absolute;
-      background-color: var(--grey-darken-2);
+      border-radius: 0 0 3px 3px;
       min-width: 150px;
       display: none;
 
       span {
         cursor: pointer;
         font-size: var(--fs-dropdown);
-        color: var(--grey-darken-1);
         padding: .6em .2em;
-
-        &:hover {
-          background-color: var(--grey-darken-2);
-          color: var(--accent-color);
-          transition: background-color .2s ease-in-out,
-                      color .2s ease-in-out;
-          -webkit-transition: background-color .2s ease-in-out,
-                              color .2s ease-in-out;
-        }
       }
     }
   }

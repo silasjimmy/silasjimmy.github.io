@@ -11,11 +11,14 @@
   z-index: 1000;
 
   .sidenav__links {
+    position: relative;
+    top: calc(calc(100% - 80%) / 2);
+    margin: 0 auto;
     width: 50%;
-    height: 60%;
+    height: 80%;
 
     .link {
-      margin: 1em;
+      margin: 1.7em 1em;
 
       a {
         font-size: var(--fs-title);
@@ -29,7 +32,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.5em;
+    margin: 1.5em 2em;
     width: 33px;
     height: 33px;
     cursor: pointer;
@@ -54,4 +57,5 @@
 
 .sidenav--open {
   display: block !important;
+  animation: fadeIn var(--anim-duration);
 }
