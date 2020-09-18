@@ -38,13 +38,7 @@
             display: none;
           }
 
-          &:hover {
-            box-shadow: var(--box-shadow);
-            transition: box-shadow .2s ease-in-out;
-            -webkit-transition: box-shadow .2s ease-in-out;
-
-            span {display: inline !important;}
-          }
+          &:hover {span {display: inline !important;}}
         }
       }
     }

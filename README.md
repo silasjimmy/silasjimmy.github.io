@@ -1,5 +1,6 @@
-# Silas Jimmy Portfolio
+# Website
 
-Visit my website [here] (https://silasjimmy.github.io)
+***[Silas Jimmy](https://silasjimmy.github.io)***
 
+Copyright 2020.
 

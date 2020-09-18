@@ -2,60 +2,99 @@
 
 :root {
   --fs-title: 3.3em;
-  --fs-subtitle: 1.5em;
   --fs-h1: 2.5rem;
   --fs-h2: 2rem;
   --fs-h3: 1.25rem;
+  --fs-h4: 1.2rem;
+  --fs-h5: 1.5em;
   --fs-p: 1.3rem;
   --fs-btn: 0.8rem;
+  --fs-dropdown: 1.1em;
 
-  --black-color: #000000;
-  --accent-color: #00acc1;
-  --light-grey: #f5f5f5;
-  --dark-grey: #212121;
+  --black: #000000;
+  --grey-lighten-1: #fafafa;
+  --grey-lighten-2: #e0e0e0;
+  --accent-color: #03a9f4;
+  --grey-darken-1: #212121;
+  --grey-darken-2: #f1f1f1;
 
   --ff-title: 'Anton', sans-serif;;
-  --ff-subtitle: 'Oswald', sans-serif;;
+  --ff-h5: 'Oswald', sans-serif;;
   --ff-p: 'Roboto Mono', monospace;
   --ff-btn: fantasy;
 
-  --box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
-  --slim-bs: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  --dark-box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  --light-box-shadow: 0.25em 0.25em 0.75em rgba(255, 255, 255, 0.25), 0.125em 0.125em 0.25em rgba(255, 255, 255, 0.15);
+  --blue-box-shadow: 0.25em 0.25em 0.75em rgba(3, 109, 154, 0.25), 0.125em 0.125em 0.25em rgba(3, 109, 154, 0.15);
+  --dark-slim-bs: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  --blue-slim-bs: 0 2px 2px 0 rgba(3, 109, 154, 0.14), 0 3px 1px -2px rgba(3, 109, 154, 0.12), 0 1px 5px 0 rgba(3, 109, 154, 0.2);
 
   --anim-time: 2s;
 }
 
 html {scroll-behavior: smooth;}
 
-body {background-color: var(--light-grey);}
+body {margin: 0}
 
-body, p, h1, h2, h3 {margin: 0;}
+h1 {
+  margin: 0;
+  font-size: var(--fs-h1);
+}
 
-img {object-fit: cover;}
+h2 {
+  margin: 0;
+  font-size: var(--fs-h2);
+}
 
-h1 { font-size: var(--fs-h1); }
-h2 { font-size: var(--fs-h2); }
-h3 { font-size: var(--fs-h3); }
+h3 {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-weight: 100;
+  margin: 5px;
+  font-size: var(--fs-h4);
+}
+
+h5 {
+  margin: 0;
+  font-size: var(--fs-h5);
+  font-family: var(--ff-h5);
+  padding: 8px 15px 8px 180px;
+  font-weight: 600;
+  border-radius: 0 0 0 7px;
+  pointer-events: none;
+}
 
 p {
+  margin: 0;
   font-size: var(--fs-p);
   font-family: var(--ff-p);
   line-height: 1.5;
 }
 
-a {
-  text-decoration: none;
-  color: var(--black-color);
-  font-family: var(--ff-btn);
-}
+img {object-fit: cover}
+
+a {text-decoration: none;}
 
 ul {
   list-style: none;
   padding: 0;
 }
 
-.main {
-  width: 100%;
+.body {width: 100%;}
+
+.main {width: 100%;}
+
+.logo_link {
+  font-size: var(--fs-p);
+  font-family: var(--ff-p);
+}
+
+.light_theme_link {
+  font-size: var(--fs-p);
+  margin: 5px;
 }
 
 .hsc {
@@ -79,8 +118,6 @@ ul {
 }
 
 .btn {
-  color: var(--light-grey);
-  background: var(--dark-grey);
   padding: 10px;
   font-weight: 600;
   border-radius: 2px;
@@ -91,20 +128,9 @@ ul {
 
   &:hover {
     transform: scale(1.1);
-    background: var(--accent-color);
-    color: var(--black-color);
-    transition: transform .2s linear,
-                background .2s linear,
-                color .2s linear;
-    -webkit-transition: transform .2s linear,
-                        background .2s linear,
-                        color .2s linear;
+    transition: transform .2s linear;
+    -webkit-transition: transform .2s linear;
   }
-}
-
-.header-on-scroll {
-  box-shadow: var(--slim-bs);
-  -webkit-box-shadow: var(--slim-bs);
 }
 
 .hidden {
@@ -115,11 +141,4 @@ ul {
 	width: 2em;
 	height: 2em;
   cursor: pointer;
-	fill: var(--black-color);
-
-  &:hover {
-    fill: var(--accent-color);
-    transition: fill .2s ease-in-out;
-    -webkit-transition: fill .2s ease-in-out;
-  }
 }

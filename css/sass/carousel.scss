@@ -25,15 +25,10 @@
         height: 80%;
       }
 
-      a {
+      h3 {
         text-transform: capitalize;
         font-weight: 600;
-
-        &:hover {
-          color: var(--accent-color);
-          transition: color .2s ease-in-out;
-          -webkit-transition: color .2s ease-in-out;
-        }
+        cursor: pointer;
       }
     }
   }

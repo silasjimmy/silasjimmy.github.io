@@ -7,180 +7,189 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <svg class="hidden">
-      <symbol id="arrow-left" viewBox="0 0 34 24">
-        <title>Previous</title>
-        <path d="M 0.16293759,11.979409 10.26339,0 12.741678,1.8645566 5.3447535,10.929659 33.748424,10.663856 c -0.03631,1.169427 -0.03795,1.526274 -0.07426,2.695701 L 5.6591578,13.558262 12.383443,21.806158 10.518372,24.119745 0.16293859,11.979412 c -0.2172514,-0.221641 -0.2172515,0.221641 0,0 z"/>
-      </symbol>
-      <symbol id="arrow-right" viewBox="0 0 34 24">
-        <title>Next</title>
-        <path d="M 33.585486,12.140336 23.485034,24.119744 21.006746,22.255187 28.40367,13.190086 0,13.455889 C 0.03631,12.286462 0.03795,11.929615 0.07426,10.760188 L 28.089266,10.561483 21.364981,2.3135874 23.230052,0 33.585485,12.140333 c 0.217252,0.221641 0.217252,-0.221641 0,0 z"/>
-      </symbol>
-    </svg>
+  <body class="light--mode">
+    <div class="body">
+      <svg class="hidden">
+        <symbol id="arrow-left" viewBox="0 0 34 24">
+          <title>Previous</title>
+          <path d="M 0.16293759,11.979409 10.26339,0 12.741678,1.8645566 5.3447535,10.929659 33.748424,10.663856 c -0.03631,1.169427 -0.03795,1.526274 -0.07426,2.695701 L 5.6591578,13.558262 12.383443,21.806158 10.518372,24.119745 0.16293859,11.979412 c -0.2172514,-0.221641 -0.2172515,0.221641 0,0 z"/>
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 34 24">
+          <title>Next</title>
+          <path d="M 33.585486,12.140336 23.485034,24.119744 21.006746,22.255187 28.40367,13.190086 0,13.455889 C 0.03631,12.286462 0.03795,11.929615 0.07426,10.760188 L 28.089266,10.561483 21.364981,2.3135874 23.230052,0 33.585485,12.140333 c 0.217252,0.221641 0.217252,-0.221641 0,0 z"/>
+        </symbol>
+      </svg>
 
-    <!-- Sidenav section -->
-    <nav class="sidenav">
-      <ul class="sidenav__links hsc ccc">
-        <li class="link"><a id="sidenav__link" href="#about">about</a></li>
-        <li class="link"><a id="sidenav__link" href="#do">what i do</a></li>
-        <li class="link"><a id="sidenav__link" href="#work">my work</a></li>
-        <li class="link"><a id="sidenav__link" href="#contact">contact</a></li>
-      </ul>
-      <div class="close ccc">
-        <div class="bar one"></div>
-        <div class="bar two"></div>
-      </div>
-    </nav>
-
-    <div class="main">
-      <!-- Header section -->
-      <header class="header">
-        <div class="logo"><a href="index.html"><p>{-slimjimmy-}</p></a></div>
-        <div class="open">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+      <!-- Sidenav section -->
+      <nav class="sidenav">
+        <ul class="sidenav__links hsc ccc">
+          <li class="link"><a class="dark_theme_link" id="sidenav__link" href="#about">about</a></li>
+          <li class="link"><a class="dark_theme_link" id="sidenav__link" href="#do">what i do</a></li>
+          <li class="link"><a class="dark_theme_link" id="sidenav__link" href="#work">my work</a></li>
+          <li class="link"><a class="dark_theme_link" id="sidenav__link" href="#contact">contact</a></li>
+        </ul>
+        <div class="close ccc">
+          <div class="bar one"></div>
+          <div class="bar two"></div>
         </div>
-      </header>
+      </nav>
 
-      <!-- Introduction section -->
-      <div id="intro" class="intro">
-        <section class="intro__section hsc">
-          <div class="intro__title ccc">
-            <p>Hi there,</p>
-            <p>i am</p>
-            <p><strong>Silas Jimmy</strong></p>
-          </div>
-          <div class="intro__subtitle bce"><span>programmer</span></div>
-          <div class="image"><img src="images/intro_image.jpg" alt="silas-jimmy"></div>
-        </section>
-      </div>
-
-      <!-- About section -->
-      <div id="about" class="about">
-        <section class="about__section hsc">
-          <div class="title"><h1>About Me</h1></div>
-          <div class="content">
-            <p>
-              I am a computer science student who happens to be a programmer
-              and designer. I like designing website interfaces using basic
-              HTML, CSS and vanilla JavaScript. I am a Python developer currently
-              working on small projects finding solutions to problems majorly on
-              the field of Machine and Deep Learning. I love computer games and as
-              a programmer i develop 2D games using Unity3D game engine. Basically
-              am a nerd who likes having fun with technology and a big fan of collaboration.
-            </p>
-          </div>
-          <div class="resume_link"><a class="btn" href="#">resume</a></div>
-        </section>
-      </div>
-
-      <!-- What i do section -->
-      <div id="do" class="do">
-        <section class="do__section hsc">
-          <div class="title"><h1>What I Do</h1></div>
-          <div class="do_content">
-            <div class="card_container">
-              <div class="card ccc">
-                <h2>Game Developer</h2>
-                <span class="btn">more</span>
-              </div>
-            </div>
-            <div class="card_container">
-              <div class="card ccc">
-                <h2>UI/UX Web Designer</h2>
-                <span class="btn">more</span>
-              </div>
-            </div>
-            <div class="card_container">
-              <div class="card ccc">
-                <h2>Python Developer</h2>
-                <span class="btn">more</span>
-              </div>
-            </div>
-            <div class="card_container">
-              <div class="card ccc">
-                <h2>Machine Learning</h2>
-                <span class="btn">more</span>
-              </div>
+      <div class="main">
+        <!-- Header section -->
+        <header class="header">
+          <div class="logo"><a class="logo_link" href="index.html">{-slimjimmy-}</a></div>
+          <div class="dropdown">
+            <span class="dropdown_trigger">Theme</span>
+            <div class="dropdown_content">
+              <span>Dark</span>
+              <span>Light</span>
             </div>
           </div>
-        </section>
-      </div>
+          <div class="open">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </header>
 
-      <!-- My work section -->
-      <div id="work" class="work">
-        <section class="work__section hsc">
-          <div class="title"><h1>My Work</h1></div>
-          <div class="work_content">
-            <div class="container">
-              <div class="prev ccc"><svg class="icon prev_slide"><use xlink:href="#arrow-left"></use></svg></div>
-              <div class="next ccc"><svg class="icon next_slide"><use xlink:href="#arrow-right"></use></svg></div>
-              <div class="work">
-                <div class="carousel">
-                  <div class="carousel-item">
-                    <div class="card">
-                      <img src="images/card_image.jpg" alt="">
-                      <a href="#"><h3>work one title</h3></a>
+        <!-- Introduction section -->
+        <div id="intro" class="intro">
+          <section class="intro__section hsc">
+            <div class="intro__title ccc">
+              <p>Hi there,</p>
+              <p>i am</p>
+              <p><strong>Silas Jimmy</strong></p>
+            </div>
+            <div class="intro__subtitle bce"><h5>programmer</h5></div>
+            <div class="image"><img src="images/intro_image.jpg" alt="silas-jimmy"></div>
+          </section>
+        </div>
+
+        <!-- About section -->
+        <div id="about" class="about">
+          <section class="about__section hsc">
+            <div class="title"><h1>About Me</h1></div>
+            <div class="content">
+              <p>
+                I am a computer science student who happens to be a programmer
+                and designer. I like designing website interfaces using basic
+                HTML, CSS and vanilla JavaScript. I am a Python developer currently
+                working on small projects finding solutions to problems majorly on
+                the field of Machine and Deep Learning. I love computer games and as
+                a programmer i develop 2D games using Unity3D game engine. Basically
+                am a nerd who likes having fun with technology and a big fan of collaboration.
+              </p>
+            </div>
+            <div class="resume_link"><a class="btn" href="#">resume</a></div>
+          </section>
+        </div>
+
+        <!-- What i do section -->
+        <div id="do" class="do">
+          <section class="do__section hsc">
+            <div class="title"><h1>What I Do</h1></div>
+            <div class="do_content">
+              <div class="card_container">
+                <div class="card ccc">
+                  <h2>Game Developer</h2>
+                  <span class="btn">more</span>
+                </div>
+              </div>
+              <div class="card_container">
+                <div class="card ccc">
+                  <h2>UI/UX Web Designer</h2>
+                  <span class="btn">more</span>
+                </div>
+              </div>
+              <div class="card_container">
+                <div class="card ccc">
+                  <h2>Python Developer</h2>
+                  <span class="btn">more</span>
+                </div>
+              </div>
+              <div class="card_container">
+                <div class="card ccc">
+                  <h2>Machine Learning</h2>
+                  <span class="btn">more</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- My work section -->
+        <div id="work" class="work">
+          <section class="work__section hsc">
+            <div class="title"><h1>My Work</h1></div>
+            <div class="work_content">
+              <div class="container">
+                <div class="prev ccc"><svg class="icon prev_slide"><use xlink:href="#arrow-left"></use></svg></div>
+                <div class="next ccc"><svg class="icon next_slide"><use xlink:href="#arrow-right"></use></svg></div>
+                <div class="work">
+                  <div class="carousel">
+                    <div class="carousel-item">
+                      <div class="card">
+                        <img src="images/card_image.jpg" alt="">
+                        <h3>work one title</h3>
+                      </div>
+                      <div class="card">
+                        <img src="images/card_image.jpg" alt="">
+                        <h3>work two title</h3>
+                      </div>
                     </div>
-                    <div class="card">
-                      <img src="images/card_image.jpg" alt="">
-                      <a href="#"><h3>work two title</h3></a>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card">
-                      <img src="images/card_image.jpg" alt="">
-                      <a href="#"><h3>work three title</h3></a>
-                    </div>
-                    <div class="card">
-                      <img src="images/card_image.jpg" alt="">
-                      <a href="#"><h3>work four title</h3></a>
+                    <div class="carousel-item">
+                      <div class="card">
+                        <img src="images/card_image.jpg" alt="">
+                        <h3>work three title</h3>
+                      </div>
+                      <div class="card">
+                        <img src="images/card_image.jpg" alt="">
+                        <h3>work four title</h3>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="indicators">
-                <span class="indicator"></span>
-                <span class="indicator"></span>
+                <div class="indicators">
+                  <span class="indicator"></span>
+                  <span class="indicator"></span>
+                </div>
               </div>
             </div>
+          </section>
+        </div>
+
+        <!-- Contact section -->
+        <div id="contact" class="contact">
+          <section class="contact__section hsc">
+            <h1>Contact</h1>
+            <p>
+              Have a problem you need help with? Make sure to leave a message
+              in any of my contacts below. We can grab a cup of coffee and talk
+              more. I also welcome friendly chats and i am a big fan of collaboration.
+              As the wise man said, <strong><i>No man is an island</i></strong>.
+            </p>
+          </section>
+        </div>
+
+        <!-- Footer section -->
+        <footer class="footer">
+          <div class="links ccc">
+            <a class="light_theme_link" href="#">My blog</a>
+            <a class="light_theme_link" href="#">Resume</a>
+            <a class="light_theme_link" href="#">Other</a>
           </div>
-        </section>
+          <div class="contact_info ccc">
+            <h4>+254 719 773 594</h4>
+            <h4>jimmysilas17@gmail.com</h4>
+            <h4 class="address">P.O Box 252-90200 Kitui.</h4>
+          </div>
+          <div class="social_info ccc">
+            <a class="light_theme_link" href="#">Linkedin</a>
+            <a class="light_theme_link" href="#">Twitter</a>
+            <a class="light_theme_link" href="#">Github</a>
+          </div>
+        </footer>
       </div>
-
-      <!-- Contact section -->
-      <div id="contact" class="contact">
-        <section class="contact__section hsc">
-          <h1>Contact</h1>
-          <p>
-            Have a problem you need help with? Make sure to leave a message
-            in any of my contacts below. We can grab a cup of coffee and talk
-            more. I also welcome friendly chats and i am a big fan of collaboration.
-            As the wise man said, <strong><i>No man is an island</i></strong>.
-          </p>
-        </section>
-      </div>
-
-      <!-- Footer section -->
-      <footer class="footer">
-        <div class="links ccc">
-          <a href="#">My blog</a>
-          <a href="#">Resume</a>
-          <a href="#">Other</a>
-        </div>
-        <div class="contact_info ccc">
-          <span>+254 719 773 594</span>
-          <span class="email">jimmysilas17@gmail.com</span>
-          <span class="address">P.O Box 252-90200 Kitui.</span>
-        </div>
-        <div class="social_info ccc">
-          <a href="#">Linkedin</a>
-          <a href="#">Twitter</a>
-          <a href="#">Github</a>
-        </div>
-      </footer>
     </div>
 
     <script type="text/javascript" src="js/index.js"></script>

@@ -3,11 +3,12 @@ class Portfolio {
     this.DOM = {};
     this.DOM.el = el;
 
-    this.DOM.header = this.DOM.el.querySelector('header');
+    this.DOM.main = this.DOM.el.querySelector('.main');
+    this.DOM.header = this.DOM.main.querySelector('header');
     this.DOM.sidenavOpen = this.DOM.header.querySelector('.open');
-    this.DOM.sidenav = this.DOM.el.parentNode.querySelector('.sidenav');
+    this.DOM.sidenav = this.DOM.el.querySelector('.sidenav');
     this.DOM.sidenavClose = this.DOM.sidenav.querySelector('.close');
-    this.DOM.carouselContainer = this.DOM.el.querySelector('.work_content > .container');
+    this.DOM.carouselContainer = this.DOM.main.querySelector('.work_content > .container');
     this.DOM.nextSlideBtn = this.DOM.carouselContainer.querySelector('.next > .next_slide');
     this.DOM.prevSlideBtn = this.DOM.carouselContainer.querySelector('.prev > .prev_slide');
     this.DOM.slides = Array.from(this.DOM.carouselContainer.querySelectorAll('.carousel-item'));
@@ -61,4 +62,4 @@ class Portfolio {
   }
 }
 
-new Portfolio(document.querySelector('.main'));
+new Portfolio(document.querySelector('.body'));
