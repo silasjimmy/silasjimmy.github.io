@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>Silas Jimmy</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
   </head>
-  <body class="light--mode">
-    <div class="body">
+  <body class="light-mode">
+    <div class="main">
+      <!-- Carousel arrows -->
       <svg class="hidden">
         <symbol id="arrow-left" viewBox="0 0 34 24">
           <title>Previous</title>
@@ -21,178 +22,206 @@
       </svg>
 
       <!-- Sidenav section -->
-      <nav class="sidenav sidenav--close">
-        <ul class="sidenav__links ccc">
-          <li class="link"><a class="dark_theme_link" id="sidenav__link" href="#intro">home</a></li>
-          <li class="link"><a class="dark_theme_link" id="sidenav__link" href="#about">about</a></li>
-          <li class="link"><a class="dark_theme_link" id="sidenav__link" href="#do">what i do</a></li>
-          <li class="link"><a class="dark_theme_link" id="sidenav__link" href="#work">my work</a></li>
-          <li class="link"><a class="dark_theme_link" id="sidenav__link" href="#contact">contact</a></li>
+      <nav class="sidenav sidenav-closed">
+        <ul class="sidenav-links ">
+          <li class="link"><h1><a id="sidenav-link" href="#intro">home</a></h1></li>
+          <li class="link"><h1><a id="sidenav-link" href="#about">about</a></h1></li>
+          <li class="link"><h1><a id="sidenav-link" href="#do">what i do</a></h1></li>
+          <li class="link"><h1><a id="sidenav-link" href="#work">my work</a></h1></li>
+          <li class="link"><h1><a id="sidenav-link" href="#contact">contact</a></h1></li>
         </ul>
-        <div class="close ccc">
+        <div class="trigger sidenav-close">
           <div class="bar one"></div>
           <div class="bar two"></div>
         </div>
       </nav>
 
-      <div class="main">
-        <!-- Header section -->
-        <header class="header">
-          <div class="logo"><a class="logo_link" href="index.html">{-slimjimmy-}</a></div>
-          <div class="dropdown">
-            <span class="dropdown_trigger">Light mode</span>
-            <div class="dropdown_content">
-              <span id="dark">Dark mode</span>
-              <span id="light">Light mode</span>
-            </div>
+      <!-- Header section -->
+      <header class="navbar">
+        <div class="logo"><a href="index.html"><h4>{-slimjimmy-}</h4></a></div>
+        <div class="dropdown">
+          <h4 class="dropdown-trigger">Light mode</h4>
+          <div class="dropdown-content">
+            <span id="dark">Dark mode</span>
+            <span id="light">Light mode</span>
           </div>
-          <div class="open">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        </div>
+        <div class="trigger sidenav-open">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </header>
+
+      <!-- Introduction section -->
+      <div id="intro" class="full-height">
+        <section class="intro section">
+          <div class="title intro-title">
+            <h1>Hi there,</h1>
+            <h1>i am</h1>
+            <h1>Silas Jimmy</h1>
           </div>
-        </header>
-
-        <!-- Introduction section -->
-        <div id="intro" class="intro">
-          <section class="intro__section hsc">
-            <div class="intro__title ccc">
-              <p>Hi there,</p>
-              <p>i am</p>
-              <p><strong>Silas Jimmy</strong></p>
-            </div>
-            <div class="intro__subtitle bce"><h5>programmer</h5></div>
-            <div class="image"><img src="images/intro_image.jpg" alt="silas-jimmy"></div>
-          </section>
-        </div>
-
-        <!-- About section -->
-        <div id="about" class="about">
-          <section class="about__section hsc">
-            <div class="title"><h1>About Me</h1></div>
-            <div class="content">
-              <p>
-                I am a computer science student who happens to be a programmer
-                and designer. I like designing website interfaces using basic
-                HTML, CSS and vanilla JavaScript. I am a Python developer currently
-                working on small projects finding solutions to problems majorly on
-                the field of Machine and Deep Learning. I love computer games and as
-                a programmer i develop 2D games using Unity3D game engine. Basically
-                am a nerd who likes having fun with technology and a big fan of collaboration.
-              </p>
-            </div>
-            <div class="resume_link"><a class="btn" href="#">resume</a></div>
-          </section>
-        </div>
-
-        <!-- What i do section -->
-        <div id="do" class="do">
-          <section class="do__section hsc">
-            <div class="title"><h1>What I Do</h1></div>
-            <div class="do_content">
-              <div class="card_container">
-                <div class="card ccc">
-                  <h2>Game Developer</h2>
-                  <span class="btn">more</span>
-                </div>
-              </div>
-              <div class="card_container">
-                <div class="card ccc">
-                  <h2>UI/UX Web Designer</h2>
-                  <span class="btn">more</span>
-                </div>
-              </div>
-              <div class="card_container">
-                <div class="card ccc">
-                  <h2>Python Developer</h2>
-                  <span class="btn">more</span>
-                </div>
-              </div>
-              <div class="card_container">
-                <div class="card ccc">
-                  <h2>Machine Learning</h2>
-                  <span class="btn">more</span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <!-- My work section -->
-        <div id="work" class="work">
-          <section class="work__section hsc">
-            <div class="title"><h1>My Work</h1></div>
-            <div class="work_content">
-              <div class="container">
-                <div class="prev ccc"><svg class="icon prev_slide"><use xlink:href="#arrow-left"></use></svg></div>
-                <div class="next ccc"><svg class="icon next_slide"><use xlink:href="#arrow-right"></use></svg></div>
-                <div class="work">
-                  <div class="carousel">
-                    <div class="carousel-item">
-                      <div class="card">
-                        <img src="images/card_image.jpg" alt="">
-                        <h3>work one title</h3>
-                      </div>
-                      <div class="card">
-                        <img src="images/card_image.jpg" alt="">
-                        <h3>work two title</h3>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="card">
-                        <img src="images/card_image.jpg" alt="">
-                        <h3>work three title</h3>
-                      </div>
-                      <div class="card">
-                        <img src="images/card_image.jpg" alt="">
-                        <h3>work four title</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="indicators">
-                  <span class="indicator"></span>
-                  <span class="indicator"></span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <!-- Contact section -->
-        <div id="contact" class="contact">
-          <section class="contact__section hsc">
-            <h1>Contact</h1>
-            <p>
-              Have a problem you need help with? Make sure to leave a message
-              in any of my contacts below. We can grab a cup of coffee and talk
-              more. I also welcome friendly chats and i am a big fan of collaboration.
-              As the wise man said, <strong><i>No man is an island</i></strong>.
-            </p>
-          </section>
-        </div>
-
-        <!-- Footer section -->
-        <footer class="footer">
-          <div class="links ccc">
-            <a class="light_theme_link" href="#">My blog</a>
-            <a class="light_theme_link" href="#">Resume</a>
-            <a class="light_theme_link" href="#">Other</a>
-          </div>
-          <div class="contact_info ccc">
-            <h4>+254 719 773 594</h4>
-            <h4>jimmysilas17@gmail.com</h4>
-            <h4 class="address">P.O Box 252-90200 Kitui.</h4>
-          </div>
-          <div class="social_info ccc">
-            <a class="light_theme_link" href="https://www.linkedin.com/in/silas-jimmy-2b7543150/">Linkedin</a>
-            <a class="light_theme_link" href="https://twitter.com/silasjimmy17">Twitter</a>
-            <a class="light_theme_link" href="https://github.com/silasjimmy">Github</a>
-          </div>
-        </footer>
+          <div class="intro-subtitle"><h3>programmer</h3></div>
+          <div class="intro-image"><img src="img/silas_jimmy.jpg" alt="silas-jimmy"></div>
+        </section>
       </div>
+
+      <!-- About section -->
+      <div id="about" class="full-height">
+        <section class="about section">
+          <div class="title"><h1>About Me</h1></div>
+          <div class="content">
+            <p>
+              I am a computer science student who happens to be a programmer
+              and designer. I like designing website interfaces using basic
+              HTML, CSS and vanilla JavaScript. I am a Python developer currently
+              working on small projects finding solutions to problems majorly on
+              the field of Machine and Deep Learning. I love computer games and as
+              a programmer i develop 2D games using Unity3D game engine. Basically
+              am a nerd who likes having fun with technology and a big fan of collaboration.
+            </p>
+          </div>
+          <div class="resume-link"><a class="btn" href="#">resume</a></div>
+        </section>
+      </div>
+
+      <!-- What i do section -->
+      <div id="do" class="full-height">
+        <section class="do section">
+          <div class="title"><h1>What I Do</h1></div>
+          <div class="content">
+            <div class="cards cards-container">
+              <div class="card">
+                <div class="card-title"><h2>Game Developer</h2></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                  anim id est laborum.
+                </p>
+                <div class="card-btn"><div class="btn">more</div></div>
+              </div>
+              <div class="card">
+                <div class="card-title"><h2>Front-end developer</h2></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                  anim id est laborum.
+                </p>
+                <div class="card-btn"><div class="btn">more</div></div>
+              </div>
+              <div class="card">
+                <div class="card-title"><h2>Python developer</h2></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                  anim id est laborum.
+                </p>
+                <div class="card-btn"><div class="btn">more</div></div>
+              </div>
+              <div class="card">
+                <div class="card-title"><h2>Machine learning</h2></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                  anim id est laborum.
+                </p>
+                <div class="card-btn"><div class="btn">more</div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- My work section -->
+      <div id="work" class="full-height">
+        <section class="work section">
+          <div class="title"><h1>My Work</h1></div>
+          <div class="carousel">
+            <div class="left-arrow"><svg class="icon prev"><use xlink:href="#arrow-left"></use></svg></div>
+            <div class="carousel-items">
+              <div class="carousel-item active-slide">
+                <div class="item">
+                  <img src="img/carousel_image.jpg" alt="work-one">
+                  <div class="item-title"><h5>work one title</h5></div>
+                </div>
+                <div class="item">
+                  <img src="img/carousel_image.jpg" alt="work-one">
+                  <div class="item-title"><h5>work two title</h5></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="item">
+                  <img src="img/carousel_image.jpg" alt="work-one">
+                  <div class="item-title"><h5>work three title</h5></div>
+                </div>
+                <div class="item">
+                  <img src="img/carousel_image.jpg" alt="work-one">
+                  <div class="item-title"><h5>work four title</h5></div>
+                </div>
+              </div>
+            </div>
+            <div class="right-arrow"><svg class="icon next"><use xlink:href="#arrow-right"></use></svg></div>
+            <div class="indicators">
+              <div class="active-indicator indicator"></div>
+              <div class="indicator"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Contact section -->
+      <div id="contact" class="half-height">
+        <section class="contact section ">
+          <h1 class="title">Contact</h1>
+          <p>
+            Have a problem you need help with? Make sure to leave a message
+            in any of my contacts below. We can grab a cup of coffee and talk
+            more. I also welcome friendly chats and i am a big fan of collaboration.
+            As the wise man said, <strong><i>No man is an island</i></strong>.
+          </p>
+        </section>
+      </div>
+
+      <!-- Footer section -->
+      <footer class="footer">
+        <div class="center-content">
+          <a class="footer-link" href="#">My blog</a>
+          <a class="footer-link" href="#">Resume</a>
+          <a class="footer-link" href="#">Other</a>
+        </div>
+        <div class="center-content">
+          <h6 class="footer-link">+254 719 773 594</h6>
+          <h6 class="footer-link">jimmysilas17@gmail.com</h6>
+          <h6 class="footer-link address">P.O Box 252-90200 Kitui.</h6>
+        </div>
+        <div class="center-content">
+          <a class="footer-link" href="https://www.linkedin.com/in/silas-jimmy-2b7543150/">Linkedin</a>
+          <a class="footer-link" href="https://twitter.com/silasjimmy17">Twitter</a>
+          <a class="footer-link" href="https://github.com/silasjimmy">Github</a>
+        </div>
+      </footer>
     </div>
 
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/Portfolio.js"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 @import "general";
+@import "navbar";
+@import "dropdown";
 @import "sidenav";
-@import "header";
 @import "intro";
 @import "about";
 @import "do";
@@ -8,6 +9,5 @@
 @import "carousel";
 @import "contact";
 @import "footer";
-@import "animations";
-@import "light_mode";
-@import "dark_mode";
+@import "light-mode";
+@import "dark-mode";

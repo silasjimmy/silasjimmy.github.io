@@ -1,40 +1,78 @@
 /* Carousel */
 
-.carousel * {
-  box-sizing: border-box;
-}
-
 .carousel {
-  height: 100%;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 90% 10%;
 
-  .carousel-item {
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  .left-arrow {
+    grid-area: 1/1/1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .card {
-      width: 50%;
+  .carousel-items {
+    grid-area: 1/2/1/2;
+    position: relative;
+
+    .carousel-item {
+      width: 100%;
       height: 100%;
-      padding: 5px;
-      text-align: center;
+      position: absolute;
+      display: none;
 
-      img {
-        width: 100%;
-        height: 80%;
-      }
+      .item {
+        width: 50%;
+        height: 95%;
+        display: grid;
+        grid-template-rows: 80% 20%;
+        margin: 1%;
 
-      h3 {
-        text-transform: capitalize;
-        font-weight: 600;
-        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .item-title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
+    }
+  }
+
+  .right-arrow {
+    grid-area: 1/3/1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .indicators {
+    grid-area: 2/1/2/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .indicator {
+      width: 50px;
+      height: 5px;
+      margin: 5px;
+      border-radius: 5px;
     }
   }
 }
 
-.active--slide {
+.active-slide {
   display: flex !important;
-  flex-direction: row;
+}
+
+.icon {
+  width: 3em;
+  height: 2em;
+  cursor: pointer;
 }

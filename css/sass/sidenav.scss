@@ -1,41 +1,59 @@
-/* Sidenav styles */
+/* Sidenav */
+
+.sidenav-open {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0 0 0 5em;
+
+  .bar {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 4px;
+  }
+}
+
+.sidenav-closed {display: none !important;}
 
 .sidenav {
-  display: none;
-  background: white;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  .sidenav__links {
-    position: relative;
-    top: calc(calc(100% - 80%) / 2);
-    margin: 0 auto;
+  .sidenav-links {
     width: 50%;
-    height: 80%;
+    margin: 0 auto;
+    text-align: center;
 
     .link {
-      margin: 1.5em 1em;
+      margin: 2em 0;
 
       a {
-        font-size: var(--fs-title);
         text-transform: capitalize;
-        font-weight: 600;
       }
     }
   }
 
-  .close {
+  .sidenav-close {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.5em 2em;
+    margin: 1.5em 3em;
     width: 33px;
     height: 33px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     .bar {
       position: absolute;
@@ -50,12 +68,8 @@
     }
 
     .two {
+      transform: rotate(135deg);
       -webkit-transform: rotate(135deg);
     }
   }
-}
-
-.sidenav--open {
-  display: block !important;
-  animation: fadeIn var(--anim-duration);
 }

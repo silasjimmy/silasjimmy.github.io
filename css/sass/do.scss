@@ -1,46 +1,62 @@
-/* What i do styles */
+/* Do section */
 
 .do {
-  height: 100vh;
+  width: 60%;
+  height: 60%;
+  display: grid;
+  grid-template-rows: 20% 80%;
 
-  .do__section {
-    width: 60%;
-    height: 60%;
+  .cards {
+    width: 100%;
+    height: 100%;
     display: grid;
-    grid-template-rows: 17.5% 82.5%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
 
-    .title {
-      grid-area: 1/1/1/1;
-      padding: 10px;
-      pointer-events: none;
-      text-align: center;
+    .card {
+      width: 96%;
+      height: 90%;
+      margin: 2% calc(10% / 6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: .15em;
+
+      .btn, p {display: none}
+
+      &:hover {
+        .btn {display: inline}
+      }
     }
+  }
 
-    .do_content {
-      display: grid;
-      grid-template-rows: 50% 50%;
-      grid-template-columns: 50% 50%;
+  .card-reveal {
+    width: 100%;
+    height: 100%;
+    position: relative;
 
-      .card_container {
-        padding: .5em;
+    .card {
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: absolute;
+      grid-template-rows: 20% 65% 15%;
+      grid-template-columns: 100%;
 
-        .card {
-          height: 100%;
-          box-sizing: border-box;
-          border-radius: 3px;
+      .card-title {
+        padding: .2em .6em;
+      }
 
-          h2 {
-            margin-bottom: 1.2em;
-            pointer-events: none;
-          }
-
-          span {
-            display: none;
-          }
-
-          &:hover {span {display: inline !important;}}
-        }
+      .card-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        padding-right: .6em;
       }
     }
   }
 }
+
+.reveal {display: grid !important}

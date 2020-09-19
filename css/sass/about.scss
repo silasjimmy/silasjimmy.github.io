@@ -1,21 +1,14 @@
-/* About styles */
+/* About section */
 
 .about {
-  height: 100vh;
+  width: 60%;
+  height: 60%;
+  display: grid;
+  grid-template-rows: 20% 70% 10%;
 
-  .about__section {
-    width: 60%;
-    height: 60%;
-
-    .title, .content { pointer-events: none; }
-    .title { text-align: center; }
-    .content { padding: 10px; }
-
-    .resume_link {
-      display: flex;
-      justify-content: center;
-
-      a { margin: 20px; }
-    }
+  .resume-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
