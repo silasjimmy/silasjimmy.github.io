@@ -25,6 +25,7 @@ class Portfolio {
     this.slidesTotal = this.DOM.slides.length;
 
     this.isCardrevealed = false;
+    this.isSidenavOpen = false;
     this.current = 0;
 
     this.DOM.cardsContainer = this.DOM.el.querySelector('.cards-container');
@@ -47,16 +48,16 @@ class Portfolio {
 
     this.DOM.sidenav.addEventListener('click', (e) => {
       if (e.target.id != "sidenav-link") return;
-      this.DOM.sidenav.classList.toggle('sidenav-closed')
+      this.closeSidenav();
     });
 
     this.DOM.nextSlideBtn.addEventListener('click', () => this.moveTo("next"));
 
     this.DOM.prevSlideBtn.addEventListener('click', () => this.moveTo("prev"));
 
-    this.DOM.sidenavOpen.addEventListener('click', () => this.DOM.sidenav.classList.toggle('sidenav-closed'));
+    this.DOM.sidenavOpen.addEventListener('click', () => this.openSidenav());
 
-    this.DOM.sidenavClose.addEventListener('click', () => this.DOM.sidenav.classList.toggle('sidenav-closed'));
+    this.DOM.sidenavClose.addEventListener('click', () => this.closeSidenav());
 
     this.DOM.dropdownContent.addEventListener('click', e => {
       // Get the previous mode
@@ -155,6 +156,40 @@ class Portfolio {
               {value: 1, duration: 250, easing: 'easeInExpo'}],
       delay: anime.stagger(200, {easing: 'linear'})
     });
+  }
+
+  openSidenav() {
+    anime.timeline({
+      begin: () => this.DOM.sidenav.style.display = "flex"
+    }).add({
+      targets: '.sidenav',
+      opacity: [0, 1],
+      duration: 500,
+      easing: 'easeInQuad'
+    }).add({
+      targets: '.link',
+      scale: [0, 1],
+      duration: 700,
+      easing: 'easeOutExpo',
+      delay: anime.stagger(200, {easing: 'linear'})
+    }, "+=250");
+  }
+
+  closeSidenav() {
+    anime.timeline({
+      complete: () => this.DOM.sidenav.style.display = "none"
+    }).add({
+      targets: '.link',
+      scale: [1, 0],
+      easing: 'easeInExpo',
+      duration: 700,
+      delay: anime.stagger(200, {easing: 'linear'})
+    }).add({
+      targets: '.sidenav',
+      opacity: [1, 0],
+      duration: 500,
+      easing: 'easeOutQuad'
+    }, "+=150");
   }
 }
 

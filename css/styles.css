@@ -166,9 +166,6 @@ li {
     border-radius: 2px;
     margin-top: 4px; }
 
-.sidenav-closed {
-  display: none !important; }
-
 .sidenav {
   position: fixed;
   top: 0;
@@ -176,7 +173,7 @@ li {
   z-index: 10;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
