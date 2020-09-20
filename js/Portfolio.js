@@ -28,8 +28,7 @@ class Portfolio {
     this.current = 0;
 
     this.DOM.cardsContainer = this.DOM.el.querySelector('.cards-container');
-    this.DOM.cards = [...this.DOM.cardsContainer.children]
-    // console.log(this.DOM.cards);
+    this.DOM.cards = [...this.DOM.cardsContainer.children];
 
     this.DOM.slides[this.current].classList.add('active-slide');
     this.DOM.indicators[this.current].classList.add('active--indicator');
@@ -38,7 +37,6 @@ class Portfolio {
   }
 
   initEvents() {
-
     window.addEventListener('scroll', () => {
       if (window.scrollY > 15) {
         this.DOM.header.classList.add("navbar-on-scroll");
@@ -74,13 +72,15 @@ class Portfolio {
     this.DOM.cardsContainer.addEventListener('click', (e) => {
       if (e.target.className != "btn") return;
 
-      this.revealCard(e.target);
-    })
+      let btn = e.target;
+      let cardIndex = [...btn.parentElement.parentElement.parentElement.children].indexOf(btn.parentElement.parentElement);
 
+      if (this.isCardrevealed) this.hideCard(btn, cardIndex);
+      else this.revealCard(btn, cardIndex);
+    });
   }
 
   moveTo(direction) {
-
     this.DOM.slides[this.current].classList.remove("active-slide");
     this.DOM.indicators[this.current].classList.remove('active-indicator');
 
@@ -88,38 +88,73 @@ class Portfolio {
 
     this.DOM.slides[this.current].classList.add("active-slide");
     this.DOM.indicators[this.current].classList.add('active-indicator');
-
   }
 
-  revealCard(buttonElement) {
+  revealCard(btn, cardIndex) {
+    // Zoom out the the cards.
+    anime({
+      targets: '.card',
+      scale: [{value: 1.03, duration: 250, easing: 'easeOutQuad'},
+              {value: 0, duration: 800, delay: 100, easing: 'easeInExpo'}],
+      delay: anime.stagger(200, {from: cardIndex, easing: 'linear'}),
+      complete: () => {
+        this.DOM.cardsContainer.classList.replace("cards", "card-reveal");
+        this.DOM.cards[cardIndex].classList.add("reveal");
+        this.DOM.cards[cardIndex].style.transform = "scale(1)";
+        btn.textContent = "less";
+        this.isCardrevealed = true;
+        this.showLargeCard();
+      }
+    });
+  }
 
-    let cardIndex = [...buttonElement.parentElement.parentElement.parentElement.children].indexOf(buttonElement.parentElement.parentElement);
+  hideCard(btn, cardIndex) {
+    // Hide the large card.
+    anime.timeline({
+      duration: 800,
+      easing: 'easeInOutSine'
+    }).add({
+      targets: '.reveal',
+      opacity: [1, 0]
+    }).add({
+      targets: '.card-reveal',
+      scale: [1, 0],
+      complete: () => {
+        this.DOM.cardsContainer.classList.replace("card-reveal", "cards");
+        this.DOM.cards[cardIndex].classList.remove("reveal");
+        // this.DOM.cards[cardIndex].style.opacity = "1";
+        this.DOM.cardsContainer.style.transform = "scale(1)";
+        btn.textContent = "more";
+        this.isCardrevealed = false;
+        // Show the small cards.
+        this.showSmallCards();
+      }
+    });
+  }
 
-    if (this.isCardrevealed) {
+  showLargeCard() {
+    // Show the large card.
+    anime.timeline({
+      duration: 800,
+      easing: 'easeInOutSine'
+    }).add({
+      targets: '.card-reveal',
+      scale: [0, 1]
+    }).add({
+      targets: '.reveal',
+      opacity: [0, 1]
+    });
+  }
 
-      // Replace the current class with new one
-      this.DOM.cardsContainer.classList.replace("card-reveal", "cards");
-
-      // Add the reveal class to the card.
-      this.DOM.cards[cardIndex].classList.remove("reveal");
-
-      // Change the button text.
-      buttonElement.textContent = "more";
-
-      // Reset the boolean
-      this.isCardrevealed = false;
-
-    } else {
-
-      this.DOM.cardsContainer.classList.replace("cards", "card-reveal");
-
-      this.DOM.cards[cardIndex].classList.add("reveal");
-
-      buttonElement.textContent = "less";
-
-      this.isCardrevealed = true;
-
-    }
+  showSmallCards() {
+    // Show the small cards.
+    anime({
+      targets: '.card',
+      opacity: [0, 1],
+      scale: [{value: 1.03, duration: 800, easing: 'easeInQuad'},
+              {value: 1, duration: 250, easing: 'easeInExpo'}],
+      delay: anime.stagger(200, {easing: 'linear'})
+    });
   }
 }
 

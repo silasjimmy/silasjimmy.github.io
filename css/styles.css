@@ -288,10 +288,10 @@ li {
       height: 100%;
       display: none;
       position: absolute;
-      grid-template-rows: 20% 65% 15%;
+      grid-template-rows: 18% 67% 15%;
       grid-template-columns: 100%; }
       .do .card-reveal .card .card-title {
-        padding: .2em .6em; }
+        padding: .1em .6em; }
       .do .card-reveal .card .card-btn {
         display: flex;
         flex-direction: column;

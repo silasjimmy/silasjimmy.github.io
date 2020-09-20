@@ -41,12 +41,10 @@
       height: 100%;
       display: none;
       position: absolute;
-      grid-template-rows: 20% 65% 15%;
+      grid-template-rows: 18% 67% 15%;
       grid-template-columns: 100%;
 
-      .card-title {
-        padding: .2em .6em;
-      }
+      .card-title {padding: .1em .6em}
 
       .card-btn {
         display: flex;
