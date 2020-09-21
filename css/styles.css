@@ -102,7 +102,7 @@ li {
   height: 100vh; }
 
 .half-height {
-  height: 70vh; }
+  height: 75vh; }
 
 .section {
   position: relative;
@@ -547,8 +547,12 @@ li {
     padding: .15em .4em .15em 6.5em;
     border-radius: 2px 0 0 2px; }
 
+  .icon {
+    width: 2em;
+    height: 1em; }
+
   .section {
-    top: 25%; }
+    width: 90%; }
 
   .navbar {
     grid-template-columns: 65% 20% 15%;
@@ -576,8 +580,8 @@ li {
     min-width: 70px; }
 
   .intro {
-    width: 90%;
-    height: 50%; }
+    height: 50%;
+    top: 25%; }
     .intro .intro-title {
       line-height: 1.8; }
     .intro .intro-image {
@@ -588,11 +592,10 @@ li {
         border-radius: 0 2px 2px 0; }
 
   .about {
-    width: 90%;
-    height: 50%; }
+    height: 50%;
+    top: 25%; }
 
   .do {
-    width: 90%;
     height: 70%;
     grid-template-rows: 11% 89%; }
     .do .cards {
@@ -609,6 +612,126 @@ li {
       align-items: center;
       justify-content: center; }
     .do .card-btn {
-      justify-content: center; } }
+      justify-content: center; }
+
+  .work {
+    height: 55%;
+    top: 25%;
+    grid-template-rows: 20% 80%; }
+
+  .carousel .indicators .indicator {
+    width: 40px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 3px; }
+
+  .contact {
+    height: 40%;
+    top: 25%; }
+
+  .footer {
+    height: 25vh; } }
+/* Devices max-width: 700px */
+@media only screen and (max-width: 700px) {
+  :root {
+    --fs--xlarge: 2.5rem;
+    --fs-large: 1.7rem;
+    --fs-medium: 1.3rem;
+    --fs-small: 1rem;
+    --fs-xsmall: 0.8rem;
+    --ls-h1: .05em;
+    --ls-p: .1em; }
+
+  h2 {
+    margin: 0 0 .3em 0; }
+
+  h3 {
+    padding: .15em .4em .15em 8.6em;
+    border-radius: 2px 0 0 2px; }
+
+  .icon {
+    width: 2em;
+    height: 1em; }
+
+  .section {
+    width: 80%; }
+
+  .navbar {
+    grid-template-columns: 65% 20% 15%;
+    padding: 1.5em 1.6em; }
+
+  .sidenav-open {
+    width: 35px;
+    height: 22px;
+    margin: 0 0 0 2.5em; }
+    .sidenav-open .bar {
+      height: 3px;
+      border-radius: 2px;
+      margin-top: 3px; }
+
+  .sidenav .sidenav-close {
+    margin: 1.7em 3.5em;
+    width: 25px;
+    height: 25px; }
+    .sidenav .sidenav-close .bar {
+      width: 35px;
+      height: 3px;
+      border-radius: 15px; }
+
+  .dropdown .dropdown-content {
+    min-width: 100px; }
+
+  .intro {
+    height: 40%;
+    top: 30%; }
+    .intro .intro-title {
+      line-height: 1.8; }
+    .intro .intro-image {
+      border-radius: 0 2px 2px 0; }
+      .intro .intro-image img {
+        width: 98%;
+        height: 98%;
+        border-radius: 0 2px 2px 0; }
+
+  .about {
+    height: 50%;
+    top: 25%; }
+
+  .do {
+    height: 70%;
+    grid-template-rows: 11% 89%; }
+    .do .cards {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4, 25%); }
+      .do .cards .card {
+        width: 96%;
+        margin: 1% calc(10% / 8); }
+        .do .cards .card .btn {
+          display: inline; }
+    .do .card-reveal .card .card-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+    .do .card-btn {
+      justify-content: center; }
+
+  .work {
+    height: 55%;
+    top: 25%;
+    grid-template-rows: 20% 80%; }
+
+  .carousel .indicators .indicator {
+    width: 40px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 3px; }
+
+  .contact {
+    height: 40%;
+    top: 25%; }
+
+  .footer {
+    height: 25vh; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,12 +1,12 @@
-/* Devices max-width: 400px */
+/* Devices max-width: 700px */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 700px) {
   :root {
-    --fs--xlarge: 2rem;
-    --fs-large: 1.5rem;
-    --fs-medium: 1rem;
-    --fs-small: 0.8rem;
-    --fs-xsmall: 0.5rem;
+    --fs--xlarge: 2.5rem;
+    --fs-large: 1.7rem;
+    --fs-medium: 1.3rem;
+    --fs-small: 1rem;
+    --fs-xsmall: 0.8rem;
 
     --ls-h1: .05em; // TODO:
     --ls-p: .1em; // TODO:
@@ -15,7 +15,7 @@
   h2 {margin: 0 0 .3em 0}
 
   h3 {
-    padding: .15em .4em .15em 6.5em;
+    padding: .15em .4em .15em 8.6em;
     border-radius: 2px 0 0 2px;
   }
 
@@ -24,27 +24,27 @@
     height: 1em;
   }
 
-  .section {width: 90%}
+  .section {width: 80%}
 
   .navbar {
     grid-template-columns: 65% 20% 15%;
-    padding: 0.8em 1.2em;
+    padding: 1.5em 1.6em;
   }
 
   .sidenav-open {
-    width: 25px;
-    height: 20px;
-    margin: 0 0 0 1.5em;
+    width: 35px;
+    height: 22px;
+    margin: 0 0 0 2.5em;
 
     .bar {
-      height: 2px;
-      border-radius: 1px;
+      height: 3px;
+      border-radius: 2px;
       margin-top: 3px;
     }
   }
 
   .sidenav .sidenav-close {
-    margin:  0.7em 1.5em;
+    margin:  1.7em 3.5em;
     width: 25px;
     height: 25px;
 
@@ -55,11 +55,11 @@
     }
   }
 
-  .dropdown .dropdown-content {min-width: 70px}
+  .dropdown .dropdown-content {min-width: 100px}
 
   .intro {
-    height: 50%;
-    top: 25%;
+    height: 40%;
+    top: 30%;
 
     .intro-title {line-height: 1.8}
 
