@@ -82,12 +82,34 @@ class Portfolio {
   }
 
   moveTo(direction) {
+    // Slide item animation method.
+    const animateItems = () => {
+      anime.timeline({
+        begin: () => this.DOM.slides[this.current].classList.add("active-slide")
+      }).add({
+        targets: this.DOM.slides[this.current].querySelectorAll('.item > img'),
+        width: [0, "100%"],
+        easing: 'easeInOutQuad',
+        duration: 1000
+      }).add({
+        targets: this.DOM.slides[this.current].querySelectorAll('.item > .item-title > h5'),
+        opacity: [0, 1],
+        easing: 'easeInOutSine',
+        duration: 1000
+      });
+    };
+
+    // Remove the classes from the previous slide and indicator.
     this.DOM.slides[this.current].classList.remove("active-slide");
     this.DOM.indicators[this.current].classList.remove('active-indicator');
 
+    // Determine the current slide index.
     this.current = direction === 'next' ? this.current < this.slidesTotal-1 ? this.current + 1 : 0 : this.current > 0 ? this.current - 1 : this.slidesTotal-1;
 
-    this.DOM.slides[this.current].classList.add("active-slide");
+    // Animate the slide items.
+    animateItems();
+
+    // Add the active indicator class to the current indicator.
     this.DOM.indicators[this.current].classList.add('active-indicator');
   }
 

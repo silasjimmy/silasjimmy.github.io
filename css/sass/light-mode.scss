@@ -98,6 +98,8 @@
 
   .active-indicator {
     background-color: var(--accent-clr);
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
   }
 
   .footer {
