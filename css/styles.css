@@ -3,7 +3,7 @@
   --fs-large: 3rem;
   --fs-medium: 2rem;
   --fs-small: 1.7rem;
-  --fs-footer: 1.4rem;
+  --fs-xsmall: 1.4rem;
 
   --ff-primary: 'Anton', sans-serif;
   --ff-secondary: 'Oswald', monospace;
@@ -19,14 +19,14 @@ html {
 
 body {
   margin: 0;
-  background-color: #fafafa;
+  background-color: #f5f5f5;
 }
 
 h1 {
   margin: 0;
 }
 
-h1, strong {
+h1, h2, strong {
   font-family: var(--ff-primary);
 }
 
@@ -34,7 +34,7 @@ a, p, span {
   font-family: var(--ff-secondary);
 }
 
-h1, strong, p, a, span {
+h1, h2, strong, p, a, span {
   color: #212121;
 }
 
@@ -58,8 +58,6 @@ strong {
   left: 0;
   right: 0;
 }
-
-/* .main * {border: 1px solid black} */
 
 .main .navbar {
   padding: 2.5em;
@@ -156,7 +154,7 @@ strong {
 .main .main__content .about div .btn {
   padding: .5em 1em;
   background-color: #212121;
-  color: #fafafa;
+  color: #f5f5f5;
 }
 
 .main .main__content .about div .btn:hover {
@@ -176,11 +174,11 @@ strong {
 }
 
 .main .main__content .work h1 {
-  color: #fafafa;
+  color: #f5f5f5;
   font-size: var(--fs-large);
 }
 
-.main .main__content .work p {
+.main .main__content .work .work__subtitle {
   color: #42a5f5;
   font-weight: 600;
   margin: 1em 0;
@@ -188,13 +186,36 @@ strong {
 
 .main .main__content .work .grid {
   width: 100%;
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: .5em;
+  grid-template-columns: repeat(4, 25%);
 }
 
-.main .main__content .work .grid img {
-  max-width: 100%;
+.main .main__content .work .grid .work__item {
+  padding: .5em;
+}
+
+.main .main__content .work .grid .work__item .card {
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+}
+
+.main .main__content .work .grid .work__item .card img {
+  width: 100%;
+  height: 65%;
+}
+
+.main .main__content .work .grid .work__item .card h2 {
+  font-size: var(--fs-small);
+  margin: .05em 0;
+}
+
+.main .main__content .work .grid .work__item .card p {
+  font-size: var(--fs-xsmall);
+  color: #424242;
+  margin: 0 .2em;
 }
 
 .main .main__content .footer {
@@ -214,8 +235,8 @@ strong {
 
 .main .main__content .footer .footer__section a,
 .main .main__content .footer .footer__section span {
-  color: #fafafa;
-  font-size: var(--fs-footer);
+  color: #f5f5f5;
+  font-size: var(--fs-xsmall);
   margin: .6em 0;
 }
 
