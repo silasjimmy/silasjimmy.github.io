@@ -2,109 +2,241 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silas Jimmy</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
   </head>
-  <body>
-    <div class="main">
-      <nav class="navbar">
-        <a class="logo" href="index.html">{ slimjimmy }</a>
-        <div class="sidenav__trigger">
-          <div></div>
-          <div class="center__bar"></div>
-          <div></div>
+  <body class="grey lighten-5">
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+      <nav class="blue lighten-1">
+        <div class="nav-wrapper">
+          <span data-target="sidenav" class="sidenav-trigger hide-on-large-only">
+            <i class="material-icons pointer">menu</i>
+          </span>
+          <a href="index.html" class="brand-logo">{ silasjimmy }</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#my-work">My work</a></li>
+            <li><a href="#contact-me">Contact me</a></li>
+          </ul>
         </div>
       </nav>
-      <div class="main__content">
-        <div class="intro">
-          <img src="img/silas-jimmy.jpg" alt="silas jimmy">
-          <h1>Hello, i am <br> <strong>Silas Jimmy</strong></h1>
-          <p>data scientist</p>
+    </div>
+
+    <!-- Sidenav -->
+    <ul id="sidenav" class="sidenav">
+      <li>
+        <div class="user-view blue lighten-1">
+          <center><img class="circle" src="images/avatar.jpg"></center>
+          <center><h5 class="white-text">Silas Jimmy</h5></center>
+          <center class="skills">
+            <h6 class="white-text">Scientist</h6>
+            <h6 class="white-text">Programmer</h6>
+            <h6 class="white-text">Designer</h6>
+          </center>
         </div>
-        <div class="about">
-          <h1>About Me</h1>
-          <p>
-            I am a computer science student doing my 3<sup>rd</sup> year.
-            I specialize in Data science and Machine learning. I am also
-            a Python programmer, Web interaction designer and novice indie game developer.
-            Currently i am the Data Science East Africa (DSEA) campus ambassador and
-            Developer Students Club (DSC) Co-lead Machine learning, all at Pwani University.
-            I believe that technology can be used in may ways to improve people's lives
-            and it is my desire to provide solutions to the existing problems in the
-            society through technology. Check out my various accomplishments below.
-          </p>
-          <div><a class="btn" href="#">resume</a></div>
+      </li>
+      <li><a class="subheader">Sections</a></li>
+      <li><a href="#about-me" class="sidenav-close waves-effect waves-blue"><i class="material-icons">info</i>About me</a></li>
+      <li><a href="#achievements" class="sidenav-close waves-effect waves-blue"><i class="material-icons">book</i>Achievements</a></li>
+      <li><a href="#my-work" class="sidenav-close waves-effect waves-blue"><i class="material-icons">work</i>My work</a></li>
+      <li><a href="#contact-me" class="sidenav-close waves-effect waves-blue"><i class="material-icons">contacts</i>Contact me</a></li>
+    </ul>
+
+    <!-- Intro section -->
+    <div class="intro">
+      <div class="container center">
+        <img src="images/avatar.jpg" class="circle avatar" alt="profile-image">
+        <h5 class="name">silas jimmy</h5>
+        <div class="skills">
+          <h6>scientist</h6>
+          <h6 class="insert">programmer</h6>
+          <h6 class="insert">designer</h6>
         </div>
-        <div class="work">
-          <h1>My Work</h1>
-          <p class="work__subtitle">A selection of my range of work</p>
-          <div class="grid">
-            <div class="work__item">
-              <a href="#">
-                <div class="card">
-                  <img src="img/work_img.jpg" alt="work1">
-                  <center>
-                    <h2>Tic Tac Toe</h2>
-                    <p>Unbeatable AI using the minimax algorithm</p>
-                  </center>
-                </div>
-              </a>
-            </div>
-            <div class="work__item">
-              <a href="#">
-                <div class="card">
-                  <img src="img/work_img.jpg" alt="work1">
-                  <center>
-                    <h2>Permutation</h2>
-                    <p>Generating a list of string permutations using recursion</p>
-                  </center>
-                </div>
-              </a>
-            </div>
-            <div class="work__item">
-              <a href="#">
-                <div class="card">
-                  <img src="img/work_img.jpg" alt="work1">
-                  <center>
-                    <h2>Carousel</h2>
-                    <p>A rotating 3d carousel in HTML, CSS & JS</p>
-                  </center>
-                </div>
-              </a>
-            </div>
-            <div class="work__item">
-              <a href="#">
-                <div class="card">
-                  <img src="img/work_img.jpg" alt="work1">
-                  <center>
-                    <h2>Image Data Generator</h2>
-                    <p>A library to generate image data from locally stored images</p>
-                  </center>
-                </div>
-              </a>
+      </div>
+    </div>
+
+    <!-- Parallax -->
+    <div class="parallax-container"><div class="parallax"><img src="images/parallax.jpg"></div></div>
+
+    <!-- About me section -->
+    <div id="about-me" class="about-me">
+      <div class="container">
+        <div class="row">
+          <div class="col l3 s12 slider-wrapper">
+            <div class="slider z-depth-3">
+              <ul class="slides">
+                <li><img src="images/slider1.jpg" alt="image"></li>
+                <li><img src="images/slider2.jpg" alt="image"></li>
+                <li><img src="images/slider3.jpg" alt="image"></li>
+              </ul>
             </div>
           </div>
-        </div>
-        <div class="footer">
-          <div class="footer__section">
-            <a href="#">My work</a>
-            <a href="#">Blog</a>
-            <a href="#">Resume in pdf</a>
-          </div>
-          <div class="footer__section">
-            <span>jimmysilas17@gmail.com</span>
-            <span>+254 719 773 594</span>
-            <span>P.O Box 252-90200 Kitui, Kenya</span>
-          </div>
-          <div class="footer__section">
-            <a href="#">Linkedin</a>
-            <a href="#">Twitter</a>
-            <a href="">Instagram</a>
+          <div class="col l9 center content">
+            <h4>About me</h4>
+            <p>
+              Hi there, my name is Silas Jimmy. I am a computer science student with
+              programming and design skills. Basically i am a Python programmer and a
+              front-end web designer but with years as a student i have learned not to
+              limit myself and thus picked other skills along the way.
+              In addition to my skills i am a machine learning enthusiast and aspiring
+              to be a data scientist in the near future. I have no professional experience
+              yet but i have managed to collaborate in a few projects and accompished many
+              on my own. Scroll below to <a href="#my-work">my work</a> and check out my various
+              projects.
+            </p>
+            <a href="docs/resume.pdf" target="_blank" class="btn blue lighten-1 waves-effect waves-light">resume</a>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Parallax -->
+    <div class="parallax-container"><div class="parallax"><img src="images/parallax.jpg"></div></div>
+
+    <!-- Achievements section -->
+    <div id="achievements" class="achievements">
+      <div class="container center">
+        <div class="row"><h4>Achievements</h4></div>
+        <div class="row">
+          <div class="col l4 m6 s6"><img class="materialboxed" data-caption="Javascript certificate" src="images/carousel1.jpg"></div>
+          <div class="col l4 m6 s6"><img class="materialboxed" data-caption="jQuery certificate" src="images/carousel2.jpg"></div>
+          <div class="col l4 m6 s6"><img class="materialboxed" data-caption="Python certificate" src="images/carousel3.jpg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parallax -->
+    <div class="parallax-container"><div class="parallax"><img src="images/parallax.jpg"></div></div>
+
+    <!-- Work section -->
+    <div id="my-work" class="my-work">
+      <div class="container">
+        <div class="row center"><h4>My work</h4></div>
+        <div class="row">
+          <div class="col s12 m6 l4">
+            <a href="#work-modal" class="modal-trigger">
+              <div style="background-image: linear-gradient(rgba(227, 242, 253, 0.2), rgba(66, 165, 245, 0.9)), url(images/work1.jpg)" class="card-panel z-depth-3 work-card pointer">
+                <h5 class="white-text">Card title</h5>
+              </div>
+            </a>
+          </div>
+          <div class="col s12 m6 l4">
+            <a href="#work-modal" class="modal-trigger">
+              <div style="background-image: linear-gradient(rgba(227, 242, 253, 0.2), rgba(66, 165, 245, 0.9)), url(images/work1.jpg)" class="card-panel z-depth-3 work-card pointer">
+                <h5 class="white-text">Card title</h5>
+              </div>
+            </a>
+          </div>
+          <div class="col s12 m6 l4">
+            <a href="#work-modal" class="modal-trigger">
+              <div style="background-image: linear-gradient(rgba(227, 242, 253, 0.2), rgba(66, 165, 245, 0.9)), url(images/work1.jpg)" class="card-panel z-depth-3 work-card pointer">
+                <h5 class="white-text">Card title</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="work-modal" class="modal">
+        <div class="modal-content center">
+          <h4>title</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+          </p>
+          <a href="#" target="_blank" class="btn blue disabled lighten-1">visit site</a>
+        </div>
+        <div class="modal-footer">
+          <a class="modal-close btn-flat"><i class="material-icons">close</i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parallax -->
+    <div class="parallax-container"><div class="parallax"><img src="images/parallax.jpg"></div></div>
+
+    <!-- Contact me section -->
+    <div id="contact-me" class="contact-me">
+      <div class="container center">
+        <h4>Contact me</h4>
+        <p>
+          In case you want to grab a coffee and talk some more or want to collabrate
+          on some project please let me know. Check my contact details below and contact
+          me ASAP.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer blue lighten-1">
+        <div class="container center">
+          <div class="row">
+            <div class="contact col l6 s6">
+              <h6 class="white-text">Contact info</h6>
+              <ul>
+                <li><p>P.O Box 252-90200 Kitui, Kenya</p></li>
+                <li><p>+254 719 773 594</p></li>
+                <li><p>jimmysilas17@gmail.com</p></li>
+              </ul>
+            </div>
+            <div class="social col l6 s6">
+              <h6>Social links</h6>
+              <ul>
+                <li>
+                  <a class="grey-text text-lighten-3" target="_blank" href="https://github.com/silasjimmy">
+                    <i class="material-icons">info</i>
+                    <span class="hide-on-small-only">Github</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="grey-text text-lighten-3" target="_blank" href="https://www.linkedin.com/in/silas-jimmy-2b7543150/">
+                    <i class="material-icons">info</i>
+                    <span class="hide-on-small-only">Linkedin</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="grey-text text-lighten-3" target="_blank" href="https://twitter.com/silasjimmy17">
+                    <i class="material-icons">info</i>
+                    <span class="hide-on-small-only">Twitter</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/silasjimmy17/">
+                    <i class="material-icons">info</i>
+                    <span class="hide-on-small-only">Instagram</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          <span>© 2021 Silas Jimmy</span>
+          <span class="right">All rights reserved</span>
+          </div>
+        </div>
+      </footer>
+
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+
+    <!-- Scroll to top button -->
+    <div class="fixed-action-btn scrollToTopBtn">
+      <a class="btn-floating tooltipped btn-large blue lighten-1" data-position="top" data-tooltip="Scroll to top">
+        <i class="large material-icons scrollToTop">expand_less</i>
+      </a>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
