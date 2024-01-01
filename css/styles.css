@@ -45,6 +45,14 @@ nav .brand-logo {
   height: 64px;
 }
 
+.btn-floating {
+  background-color: var(--blue-color);
+}
+
+.btn-floating:hover {
+  background-color: var(--blue-color);
+}
+
 @media only screen and (max-width: 992px) {
   nav .brand-logo.left {
     left: 0;
