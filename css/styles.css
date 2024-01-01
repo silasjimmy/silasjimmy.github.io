@@ -15,6 +15,37 @@ body {
   font-family: var(--font-primary);
 }
 
+h1 {
+  font-size: 40px;
+  margin: 0;
+  padding: 15px 0;
+  font-family: var(--font-secondary);
+  color: var(--blue-color);
+}
+
+h2 {
+  font-size: 25px;
+  margin: 0;
+  font-weight: 600;
+  padding: 5px 0 60px 0;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 12px;
+}
+
 nav {
   background-color: transparent;
   height: 64px;
@@ -42,6 +73,7 @@ nav .brand-logo {
 }
 
 .navbar-fixed {
+  position: absolute;
   height: 64px;
 }
 
@@ -51,6 +83,38 @@ nav .brand-logo {
 
 .btn-floating:hover {
   background-color: var(--blue-color);
+}
+
+div#home {
+  height: 100vh;
+  width: 100%;
+}
+
+div#home .sect {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+div#home .sect.left {
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--grey-lighten);
+  padding: 0 40px;
+}
+
+div#home .sect.right {
+  right: 0;
+  background-color: #000000;
+}
+
+div#home .sect.right img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 992px) {
