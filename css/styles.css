@@ -54,6 +54,14 @@ p {
   text-align: justify;
 }
 
+.animate-navbar {
+  background-color: var(--grey-lighten) !important;
+}
+
+.animate-navbar a {
+  color: var(--dark-color);
+}
+
 nav {
   background-color: transparent;
   height: 64px;
