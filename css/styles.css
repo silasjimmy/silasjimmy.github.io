@@ -44,6 +44,12 @@ h4 {
   margin: 0;
 }
 
+.about--img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /* Helper classes */
 
 .margin--vertical {
