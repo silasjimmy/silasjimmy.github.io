@@ -1,8 +1,6 @@
 :root {
-  --dark-blue-color: #143f7f;
   --blue-color: #17478e;
   --dark-color: #212121;
-
   --bg-color: #ffffff;
 
   --font-primary: "Raleway", sans-serif;
@@ -15,6 +13,17 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sidenav .background {
+  background-color: var(--dark-color) !important;
+}
+
+.sidenav .background img {
+  opacity: 0.5;
 }
 
 /* body {

@@ -34,19 +34,86 @@
   </head>
 
   <body>
-    <nav id="navbar">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">SJ</a>
+    <div class="navbar-fixed">
+      <nav id="navbar">
+        <div class="nav-wrapper">
+          <a
+            href="#"
+            data-target="slide-out"
+            class="sidenav-trigger hide-on-large-only"
+          >
+            <i class="material-icons">menu</i>
+          </a>
 
-        <ul id="nav-mobile" class="right hide-on-small-only">
-          <li><a href="#about-me">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#get-in-touch">Get In Touch</a></li>
-          <li><a class="btn" target="_blank" href="#">Blog</a></li>
-        </ul>
-      </div>
-    </nav>
+          <a href="#" class="brand-logo">SJ</a>
+
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#get-in-touch">Get In Touch</a></li>
+            <li><a class="btn" target="_blank" href="#">Blog</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="./assets/images/userview-background.png" />
+          </div>
+          <a href="#userview">
+            <img class="circle" src="./assets/images/profile-cropped.jpeg" />
+          </a>
+          <a href="#name">
+            <span>Silas Jimmy</span>
+          </a>
+          <a href="#email">
+            <span>jimmysilas17@gmail.com</span>
+          </a>
+        </div>
+      </li>
+
+      <li><a class="subheader">Sections</a></li>
+
+      <li>
+        <a href="#about-me" class="waves-effect sidenav-close">
+          <i class="material-icons">cloud</i>
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="#projects" class="waves-effect sidenav-close">
+          <i class="material-icons">cloud</i>
+          Projects
+        </a>
+      </li>
+
+      <li>
+        <a href="#education" class="waves-effect sidenav-close"
+          ><i class="material-icons">cloud</i>
+          Education
+        </a>
+      </li>
+
+      <li>
+        <a href="#get-in-touch" class="waves-effect sidenav-close">
+          <i class="material-icons">cloud</i>
+          Get In Touch
+        </a>
+      </li>
+
+      <li><div class="divider"></div></li>
+
+      <li>
+        <a class="btn waves-effect sidenav-close" target="_blank" href="#"
+          >Blog</a
+        >
+      </li>
+    </ul>
 
     <div class="container b">
       <div id="home" class="b">
