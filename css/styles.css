@@ -3,8 +3,10 @@
   --dark-color: #212121;
   --bg-color: #ffffff;
 
-  --font-primary: "Raleway", sans-serif;
-  --font-secondary: "Calistoga", serif;
+  --font-family-raleway: "Raleway", sans-serif;
+  --font-family-roboto: "Roboto Mono", monospace;
+
+  --spacing: 12px;
 }
 
 .b {
@@ -17,6 +19,46 @@ html {
   -ms-user-select: none;
   user-select: none;
 }
+
+h1 {
+  font-size: 40px;
+  font-family: var(--font-family-raleway);
+  margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: var(--font-family-raleway);
+  margin: 0;
+}
+
+h3 {
+  font-size: 14px;
+  font-family: var(--font-family-raleway);
+  margin: 0;
+}
+
+h4 {
+  font-size: 12px;
+  font-family: var(--font-family-roboto);
+  margin: 0;
+}
+
+/* Helper classes */
+
+.margin--vertical {
+  margin: var(--spacing) 0 !important;
+}
+
+.margin--top {
+  margin: var(--spacing) 0 0 0 !important;
+}
+
+.margin--bottom {
+  margin: 0 0 var(--spacing) 0 !important;
+}
+
+/* Class overrides */
 
 .sidenav .background {
   background-color: var(--dark-color) !important;
