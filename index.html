@@ -275,5 +275,18 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/shapes.js"></script>
+    <script type="text/javascript" src="js/shapegenerator.js"></script>
+    <script>
+      generateShapes({
+        element: document.querySelector("#home"),
+        options: {
+          colorList: ["#CDB08F", "#45CD78", "#3271BC"],
+          numberOfShapes: 10,
+          mode: 1,
+          rotation: true,
+        },
+      });
+    </script>
   </body>
 </html>
