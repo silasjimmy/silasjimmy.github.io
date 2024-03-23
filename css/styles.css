@@ -4,6 +4,7 @@
   --bg-color: #ffffff;
   --dark-brown-color: #b78e66;
   --brown-color: #cdb08f;
+  --light-grey-color: #d9d9d9;
 
   --font-family-raleway: "Raleway", sans-serif;
   --font-family-roboto: "Roboto Mono", monospace;
@@ -95,18 +96,6 @@ table thead tr th {
   margin: 0 0 var(--spacing) 0 !important;
 }
 
-/* .center-content--vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.center-content--horizontal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
-
 /* Class overrides */
 
 .sidenav .background {
@@ -119,7 +108,7 @@ table thead tr th {
 
 .btn {
   border: 1px solid var(--blue-color);
-  border-radius: 2px;
+  border-radius: 5px;
   color: var(--blue-color);
   background-color: var(--bg-color);
   -webkit-transition: background-color 0.2s ease-out, color 0.2s ease-out;
@@ -127,6 +116,11 @@ table thead tr th {
   text-transform: capitalize;
   -webkit-box-shadow: none;
   box-shadow: none;
+  font-size: 12px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 14px;
+  font-family: var(--font-family-roboto);
 }
 
 .btn:focus {
@@ -136,6 +130,57 @@ table thead tr th {
 .btn:hover {
   background-color: var(--blue-color);
   color: var(--bg-color);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.card {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+.card .card-image {
+  border-radius: 10px 10px 0 0;
+  background-color: var(--dark-color);
+}
+
+.card .card-image img {
+  opacity: 0.5;
+}
+
+.card .card-content {
+  border-left: 2px solid var(--light-grey-color);
+  border-right: 2px solid var(--light-grey-color);
+}
+
+.card .card-image .card-title {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font-family-raleway);
+  max-width: 100%;
+  padding: 24px;
+}
+
+.card .card-action {
+  border-top: none;
+  border-left: 2px solid var(--light-grey-color);
+  border-right: 2px solid var(--light-grey-color);
+  border-bottom: 2px solid var(--light-grey-color);
+  justify-content: center;
+}
+
+.card .card-action:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.card .card-action a {
+  color: var(--blue-color) !important;
+  text-transform: capitalize !important;
+  font-size: 12px !important;
+  font-weight: 600;
+  margin: 0 !important;
+  font-family: var(--font-family-roboto) !important;
 }
 
 .row {
