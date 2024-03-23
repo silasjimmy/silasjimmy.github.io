@@ -143,8 +143,13 @@ table thead tr th {
 }
 
 .page-footer {
+  padding-top: 0;
   color: var(--dark-color);
   background-color: var(--brown-color);
+}
+
+.page-footer p {
+  padding: 18px 14px;
 }
 
 .page-footer .footer-copyright {
