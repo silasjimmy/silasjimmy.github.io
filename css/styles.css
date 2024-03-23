@@ -2,6 +2,8 @@
   --blue-color: #3271bc;
   --dark-color: #212121;
   --bg-color: #ffffff;
+  --dark-brown-color: #b78e66;
+  --brown-color: #cdb08f;
 
   --font-family-raleway: "Raleway", sans-serif;
   --font-family-roboto: "Roboto Mono", monospace;
@@ -52,6 +54,11 @@ p {
   line-height: 1.6;
 }
 
+span {
+  font-family: var(--font-family-roboto);
+  font-size: 12px;
+}
+
 table thead tr {
   font-size: 16px;
   font-weight: 600;
@@ -88,6 +95,18 @@ table thead tr th {
   margin: 0 0 var(--spacing) 0 !important;
 }
 
+/* .center-content--vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-content--horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+
 /* Class overrides */
 
 .sidenav .background {
@@ -117,6 +136,40 @@ table thead tr th {
 .btn:hover {
   background-color: var(--blue-color);
   color: var(--bg-color);
+}
+
+.row {
+  margin-bottom: 0 !important;
+}
+
+.page-footer {
+  color: var(--dark-color);
+  background-color: var(--brown-color);
+}
+
+.page-footer .footer-copyright {
+  padding: 12px 0;
+  color: var(--dark-color);
+  background-color: var(--dark-brown-color);
+}
+
+.page-footer .footer-copyright .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer .footer-copyright .social-links {
+  margin-bottom: 5px;
+}
+
+.page-footer .footer-copyright .social-links a {
+  margin: 0 5px;
+}
+
+.page-footer .footer-copyright .social-links a img {
+  width: 24px;
+  height: 24px;
 }
 
 #home {
