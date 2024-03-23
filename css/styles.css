@@ -1,7 +1,7 @@
 :root {
   --blue-color: #3271bc;
   --dark-color: #212121;
-  --bg-color: #ffffff;
+  --white-color: #ffffff;
   --dark-brown-color: #b78e66;
   --brown-color: #cdb08f;
   --light-grey-color: #d9d9d9;
@@ -54,6 +54,7 @@ p {
   font-size: 14px;
   font-family: var(--font-family-roboto);
   line-height: 1.6;
+  text-align: justify;
 }
 
 span {
@@ -62,13 +63,13 @@ span {
 }
 
 table thead tr {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   font-family: var(--font-family-raleway);
 }
 
 table tbody tr {
-  font-size: 14px;
+  font-size: 12px;
   font-family: var(--font-family-roboto);
 }
 
@@ -81,6 +82,7 @@ table thead tr th {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 /* Helper classes */
@@ -99,6 +101,23 @@ table thead tr th {
 
 /* Class overrides */
 
+nav {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: var(--white-color);
+  border-bottom: 2px solid var(--light-grey-color);
+}
+
+nav .sidenav-trigger {
+  color: var(--dark-color);
+}
+
+nav .brand-logo {
+  color: var(--dark-color);
+  font-family: var(--font-family-raleway);
+  font-weight: 700;
+}
+
 .sidenav .background {
   background-color: var(--dark-color) !important;
 }
@@ -111,7 +130,7 @@ table thead tr th {
   border: 1px solid var(--blue-color);
   border-radius: 5px;
   color: var(--blue-color);
-  background-color: var(--bg-color);
+  background-color: var(--white-color);
   -webkit-transition: background-color 0.2s ease-out, color 0.2s ease-out;
   transition: background-color 0.2s ease-out, color 0.2s ease-out;
   text-transform: capitalize;
@@ -130,7 +149,7 @@ table thead tr th {
 
 .btn:hover {
   background-color: var(--blue-color);
-  color: var(--bg-color);
+  color: var(--white-color);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -267,7 +286,7 @@ table thead tr th {
 }
 
 /* body {
-  background-color: var(--bg-color);
+  background-color: var(--white-color);
   font-family: var(--font-primary);
   color: var(--dark-color);
 }
