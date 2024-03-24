@@ -129,9 +129,14 @@ nav .sidenav-trigger {
 }
 
 nav .brand-logo {
-  color: var(--dark-color);
-  font-family: var(--font-family-raleway);
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav .brand-logo img {
+  width: 30px;
+  height: 30px;
 }
 
 .sidenav .subheader {
