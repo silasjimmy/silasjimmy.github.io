@@ -305,6 +305,12 @@ nav .brand-logo {
   height: 24px;
 }
 
+#about-me,
+#education,
+#projects {
+  padding: 60px 0;
+}
+
 #home {
   height: 70vh;
   display: flex;
