@@ -1,28 +1,25 @@
-// class Site {
-//   constructor(el) {
-//     this.el = el;
-//     console.log("Hello!");
-//     console.log(document.getElementsByTagName("body"));
+class Portfolio {
+  constructor(el) {
+    this.el = el;
+    this.hiddenContent = document.querySelector(".hidden--content");
+    this.toggleBtn = document.getElementById("toggle--hidden");
 
-//   }
-// }
+    this.initEvents();
+  }
 
-// const site = new Site(document.getElementsByTagName("body"));
+  initEvents() {
+    this.toggleBtn.addEventListener("click", () => this.toggleHiddenContent());
+  }
 
-// function debounce(func, delay) {
-//   let timer;
-//   return function () {
-//     const context = this;
-//     const args = arguments;
-//     clearTimeout(timer);
-//     timer = setTimeout(function () {
-//       func.apply(context, args);
-//     }, delay);
-//   };
-// }
+  toggleHiddenContent() {
+    if (this.hiddenContent.classList.contains("hide")) {
+      this.hiddenContent.classList.remove("hide");
+      this.toggleBtn.innerHTML = "show less";
+    } else {
+      this.hiddenContent.classList.add("hide");
+      this.toggleBtn.innerHTML = "show more";
+    }
+  }
+}
 
-// function animateNavbar() {
-//   console.log(document.getElementById("navbar"));
-// }
-
-// animateNavbar();
+new Portfolio(document.getElementsByTagName("body"));
