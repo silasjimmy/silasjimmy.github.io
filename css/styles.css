@@ -402,6 +402,11 @@ nav .brand-logo img {
   .card .card-action a {
     font-size: 14px;
   }
+
+  .about--me {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 @media only screen and (min-width: 993px) {
