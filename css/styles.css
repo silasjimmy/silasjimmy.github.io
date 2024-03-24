@@ -25,7 +25,7 @@ html {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-family: var(--font-family-raleway);
   margin: 0;
   color: var(--blue-color);
@@ -106,6 +106,22 @@ nav {
   box-shadow: none;
   background-color: var(--white-color);
   border-bottom: 2px solid var(--light-grey-color);
+}
+
+nav ul a {
+  font-size: 14px;
+}
+
+nav li a {
+  color: var(--dark-color);
+  transition: all 0.3s ease-in-out;
+  font-family: var(--font-family-roboto);
+}
+
+nav ul a:hover {
+  background-color: transparent;
+  color: var(--blue-color);
+  font-weight: 700;
 }
 
 nav .sidenav-trigger {
@@ -281,15 +297,10 @@ nav .brand-logo {
 }
 
 .page-footer .footer-copyright {
+  text-align: center;
   padding: 12px 0;
   color: var(--dark-color);
   background-color: var(--dark-brown-color);
-}
-
-.page-footer .footer-copyright .row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .page-footer .footer-copyright .social-links {
@@ -298,6 +309,7 @@ nav .brand-logo {
 
 .page-footer .footer-copyright .social-links a {
   margin: 0 10px;
+  display: inline-flex;
 }
 
 .page-footer .footer-copyright .social-links a img {
@@ -324,4 +336,90 @@ nav .brand-logo {
 
 #home .introduction h2 {
   font-weight: 500 !important;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2,
+  .collection .collection-item.avatar i.circle {
+    font-size: 28px;
+  }
+
+  .page-footer .footer-copyright .social-links a img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .page-footer .footer-copyright .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-footer .footer-copyright .copyright {
+    text-align: right;
+  }
+
+  .page-footer .footer-copyright .social-links {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .about--img {
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  h3,
+  .card .card-image .card-title {
+    font-size: 18px;
+  }
+
+  h4,
+  p,
+  .btn,
+  table thead tr,
+  .sidenav .user-view .name strong,
+  .collection .collection-item p {
+    font-size: 16px;
+  }
+
+  span,
+  table tbody tr,
+  .sidenav .subheader,
+  .sidenav li a,
+  .sidenav .user-view .email strong,
+  .card .card-action a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  nav {
+    padding: 0 30px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2,
+  .collection .collection-item.avatar i.circle {
+    font-size: 30px;
+  }
+
+  .page-footer .footer-copyright .social-links a img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .about--img {
+    height: 300px;
+    width: 300px;
+  }
 }
