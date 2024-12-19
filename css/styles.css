@@ -228,6 +228,15 @@ nav .brand-logo img {
 .card .card-content {
   border-left: 2px solid var(--light-grey-color);
   border-right: 2px solid var(--light-grey-color);
+  padding: 12px 24px;
+}
+
+.card .card-content p {
+  margin-bottom: 8px;
+}
+
+.card .card-content span {
+  color: var(--dark-brown-color);
 }
 
 .card .card-image .card-title {
